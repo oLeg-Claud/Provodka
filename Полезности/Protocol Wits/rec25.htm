@@ -1,0 +1,93 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 25	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+
+<HEAD>
+<TITLE>
+WITS - Record 25
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 25 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 25:  WEATHER / SEA STATE</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  25 <TD WIDTH=200><B>Logical Record Type </B>  175
+                   <TD WIDTH=200><B>Auto/Manual</B> AUTO/MANUAL 
+<TR><TD COLSPAN=3><B>Trigger</B>   [TIME] Transmit at a specified time interval (secs)
+<TR><TD COLSPAN=3><B>Data Source</B> Acquired sensor data (possibly via WITS Level 0 transfer), or manually-entered data.  The record is transmitted and any automatic computations are reset at the end of the triggering interval 
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "../index(2).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(2).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(2).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(2).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2	<TD><A HREF = "../index(2).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3	<TD><A HREF = "../index(2).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4	<TD><A HREF = "../index(2).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5	<TD><A HREF = "../index(2).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6	<TD><A HREF = "../index(2).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7	<TD><A HREF = "../index(2).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8	<TD><A HREF = "../index(2).htm#appb25.8">Water Depth (mean)	<TD>WATDEPT	<TD>WDPM	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>9	<TD><A HREF = "../index(2).htm#appb25.9">Air Temperature	<TD>AIRTEMP	<TD>AIRT	<TD>F 	<TD>4	<TD>DEGC	<TD>DEGF
+<TR><TD>10	<TD><A HREF = "../index(2).htm#appb25.10">Barometric Pressure	<TD>BARPRES	<TD>BARP	<TD>F 	<TD>4	<TD>KPA<TD>	IHG
+<TR><TD>11	<TD><A HREF = "../index(2).htm#appb25.11">Waves, Significant Height	<TD>WVSHGHT	<TD>WVSH	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>12	<TD><A HREF = "../index(2).htm#appb25.12">Waves, Maximum Height	<TD>WVMHGHT	<TD>WVMH	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>13	<TD><A HREF = "../index(2).htm#appb25.13">Waves, Mean Period	<TD>WVMPER	<TD>WVMP	<TD>S 	<TD>2	<TD>SEC	<TD>SEC
+<TR><TD>14	<TD><A HREF = "../index(2).htm#appb25.14">Waves, Direction	<TD>WVDIR	<TD>WVDI	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>15	<TD><A HREF = "../index(2).htm#appb25.15">Swell, Significant Height	<TD>SWSHGHT	<TD>SWSH<TD>	F 	<TD>4	<TD>M	<TD>F
+<TR><TD>16	<TD><A HREF = "../index(2).htm#appb25.16">Swell, Maximum Height	<TD>SWMHGHT	<TD>SWMH	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>17	<TD><A HREF = "../index(2).htm#appb25.17">Swell, Mean Period	<TD>SWMPER	<TD>SWMP	<TD>S 	<TD>2	<TD>SEC	<TD>SEC
+<TR><TD>18	<TD><A HREF = "../index(2).htm#appb25.18">Swell, Direction	<TD>SWDIR	<TD>SWDI	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>19	<TD><A HREF = "../index(2).htm#appb25.19">Wind Speed ( 1 min )	<TD>WINDSPD	<TD>WSPD	<TD>F 	<TD>4	<TD>KPH	<TD>MPH
+<TR><TD>20	<TD><A HREF = "../index(2).htm#appb25.20">Wind Gusts ( 5 sec )	<TD>WINDGUST	<TD>WGST	<TD>F 	<TD>4	<TD>KPH	<TD>MPH
+<TR><TD>21	<TD><A HREF = "../index(2).htm#appb25.21">Wind Direction	<TD>WINDDIR	<TD>WDIR	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>22	<TD><A HREF = "../index(2).htm#appb25.22">Anemometer Height	<TD>ANEMHGHT	<TD>ANEM	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>23	<TD><A HREF = "../index(2).htm#appb25.23">Current Speed	<TD>CURRSPD	<TD>CSPD	<TD>S 	<TD>2	<TD>KPH	<TD>MPH
+<TR><TD>24	<TD><A HREF = "../index(2).htm#appb25.24">Current Direction	<TD>CURRDIR	<TD>CDIR	<TD>F 	<TD>4	<TD>DEG<TD>	DEG
+<TR><TD>25	<TD><A HREF = "../index(2).htm#appb25.25">Depth current measured	<TD>DEPTCURR	<TD>DCUR	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>26	<TD><A HREF = "../index(2).htm#appb25.26">Vessel Mean Draft	<TD>VESMDRFT	<TD>VMD 	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>27	<TD><A HREF = "../index(2).htm#appb25.27">Heave, Peak-to-Peak (sig)	<TD>HEAVSIG<TD>	HVSG<TD>	F 	<TD>4	<TD>M	<TD>F
+<TR><TD>28	<TD><A HREF = "../index(2).htm#appb25.28">Heave, Peak-to-Peak (max)	<TD>HEAVMAX	<TD>HVMX<TD>	F 	<TD>4	<TD>M	<TD>F
+<TR><TD>29	<TD><A HREF = "../index(2).htm#appb25.29">Heave, Mean Period	<TD>HEAVMPER	<TD>HVMP	<TD>S 	<TD>2	<TD>SEC	<TD>SEC
+<TR><TD>30	<TD><A HREF = "../index(2).htm#appb25.30">Roll, Peak-to-Peak  (sig)	<TD>ROLLSIG	<TD>RLSG	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>31	<TD><A HREF = "../index(2).htm#appb25.31">Roll, Peak-to-Peak  (max)	<TD>ROLLMAX	<TD>RLMX	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>32	<TD><A HREF = "../index(2).htm#appb25.32">Roll, Mean Period	<TD>ROLLMPER	<TD>RLMP	<TD>S 	<TD>2	<TD>SEC	<TD>SEC
+<TR><TD>33	<TD><A HREF = "../index(2).htm#appb25.33">Pitch, Peak-to-Peak (sig)	<TD>PTCHSIG	<TD>PTSG	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>34	<TD><A HREF = "../index(2).htm#appb25.34">Pitch, Peak-to-Peak (max)	<TD>PTCHMAX	<TD>PTMX<TD>	F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>35	<TD><A HREF = "../index(2).htm#appb25.35">Pitch, Mean Period	<TD>PTCHMPER	<TD>PTMP	<TD>S 	<TD>2	<TD>SEC	<TD>SEC
+<TR><TD>36	<TD><A HREF = "../index(2).htm#appb25.36">Yaw, Peak-to Peak   (sig)	<TD>YAWSIG	<TD>YWSG<TD>	F <TD>	4	<TD>DEG	<TD>DEG
+<TR><TD>37	<TD><A HREF = "../index(2).htm#appb25.37">Yaw, Peak-to-Peak   (max)	<TD>YAWMAX	<TD>YWMX	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>38	<TD><A HREF = "../index(2).htm#appb25.38">Yaw, Mean Period	<TD>YAWMPER	<TD>YWMP	<TD>S 	<TD>2	<TD>SEC	<TD>SEC
+<TR><TD>39	<TD><A HREF = "../index(2).htm#appb25.39">Surge, Peak-to-Peak (sig)	<TD>SURGSIG	<TD>SUSG<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>40	<TD><A HREF = "../index(2).htm#appb25.40">Surge, Peak-to-Peak (max)	<TD>SURGMAX	<TD>SUMX	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>41	<TD><A HREF = "../index(2).htm#appb25.41">Surge, Mean Period	<TD>SURGMPER	<TD>SUMP	<TD>S 	<TD>2	<TD>SEC	<TD>SEC
+<TR><TD>42	<TD><A HREF = "../index(2).htm#appb25.42">Sway, Peak-to-Peak  (sig)	<TD>SWAYSIG	<TD>SYSG	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>43	<TD><A HREF = "../index(2).htm#appb25.43">Sway, Peak-to-Peak  (max)	<TD>SWAYMAX	<TD>SYMX	<TD>F 	<TD>4	<TD>M<TD>	F
+<TR><TD>44	<TD><A HREF = "../index(2).htm#appb25.44">Sway, Mean Period	<TD>SWAYMPER	<TD>SYMP	<TD>S 	<TD>2	<TD>SEC	<TD>SEC
+<TR><TD>45	<TD><A HREF = "../index(2).htm#appb25.45">Trim	<TD>TRIM	<TD>TRIM	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>46	<TD><A HREF = "../index(2).htm#appb25.46">Heel	<TD>HEEL	<TD>HEEL	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>47	<TD><A HREF = "../index(2).htm#appb25.47">Weather Comments	<TD>WSSCOMM	<TD>WSCM	<TD>A 	<TD>128	<TD>----	<TD>----
+<TR><TD>48<TD><A HREF = "../index(2).htm#appb25.48">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>49<TD><A HREF = "../index(2).htm#appb25.48">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>50<TD><A HREF = "../index(2).htm#appb25.48">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>51<TD><A HREF = "../index(2).htm#appb25.48">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>52<TD><A HREF = "../index(2).htm#appb25.48">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,438 @@
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+<title>Разработка многопоточных приложений в C++Builder</title>
+<link href="/builder.css" rel="stylesheet">
+</head>
+<body>
+<div style="max-width:1200px;margin:0 auto">
+<div style="font:12px Tahoma;text-align:center;margin:5px 10px"><a href='https://taxi-po-rossii.ru/taksi-moskva-krasnodar/taksi-moskva-tuapse-czena'>такси из Москвы в Туапсе такси из Туапсе в Москву</a>. <a href='http://twister-catering.pl/baza/catering-7/'>catering Komorów, wigilię firmową</a></div>
+<h5 align="center"><br><br>
+Разработка многопоточных приложений в C++Builder<br></h5>
+<div style="max-width:1200px;margin:20px auto">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9650849142271502" data-ad-slot="6294295879" data-ad-format="horizontal"></ins>
+<script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</div>
+<p>C++Builder предоставляет несколько объектов, которые делают разработку многопоточных
+приложений проще.<br>
+Для создания многопоточных приложений в C++Builder реализован абстрактный класс
+<font color="#000099">TThread.</font><br>
+<font color="#000099">TThread</font>&nbsp;— абстрактный класс, который допускает
+создание отдельных потоков выполняющихся в приложении.<br>
+Создайте потомка класса TThread, чтобы представить выполняемый поток в многопоточном
+приложении.<br>
+Каждый новый экземпляр потомка TThread&nbsp;— новый поток выполнения.<br>
+Множество экземпляров, полученные от класса TThread , делает C++Builder многопоточным
+приложением.</p>
+<p>Вы должны создать новый объект класса, производный от TThread.<br>
+Для этого:</p>
+<p>Выберите<font color="#000099"> <strong>File | New | Other | Thread Object</strong>
+</font>, чтобы создать новый модуль, содержащий объект, производный от класса
+TThread,<br>
+вам предложат как-то назвать этот класс, назовите как вам нравится (например
+<font color="#000099">TMyThread</font>)<br>
+Будет создан новый модуль, содержащий описание этого класса TMyThread, его конструктор
+и метод <font color="#000099">Execute() </font><br><br>
+<span class="m6"> __fastcall TMyThread::TMyThread(bool CreateSuspended)<br>
+: TThread(CreateSuspended)<br>
+{<br>
+}<br>
+//---------------------------------------------------------------------------<br>
+// B метод объекта Execute(), вставьте код, который должен выполняться, когда
+поток выполняется.<br>
+void __fastcall TMyThread::Execute()<br>
+{<br>
+//---- Place thread code here ----<br>
+}<br>
+//---------------------------------------------------------------------------</span><br><br>
+В основной программе создайте объект этого потокового класса<br>
+// создаем поток в приостановленном состоянии (true), запущенном (false)<br><br>
+<span class="m6">TMyThread *Thr = new TMyThread(true); // в приостановленном
+</span></p>
+<p>Если вы заметили, в конструкторе есть параметр <strong>bool CreateSuspended</strong>,
+если при создании<br>
+объекта этот параметр имеет значение<strong> false</strong>, поток сразу&nbsp;— при
+создании объекта начнет свою работу,<br>
+то есть начнется выполнение кода в методе Execute(), если параметр <strong>bool
+CreateSuspended true</strong>, будет создан<br>
+поток в приостановленном состоянии, для запуска потока вам требуется применить
+методом <font color="#000099">Resume()</font><br>
+<span class="m6">Thr-&gt;Resume();</span></p>
+<p>Также, например в конструкторе, Вы можете указать(изменить) приоритет потока
+&nbsp;— то есть сколько процессорного времени<br>
+будет выделять операционная система для вашего потока, относительно других потоков
+вашего приложения<br>
+- за это отвечает свойство<font color="#000099"> Priority</font>, по умолчанию
+все потоки создаются с нормальным приоритетом.<br><br>
+<span class="m6">Thr-&gt;Priority = tpLower; // установить приоритет ниже нормального<br>
+Thr-&gt;Resume(); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+запустить поток выполняться</span><br><br>
+Приоритеты могут иметь следующие значения:</p>
+<table width="760" border="1" cellpadding="5">
+<tr>
+<td width="153"><strong>Значение</strong></td>
+<td width="597"><strong>Приоритет</strong></td>
+</tr>
+<tr>
+<td><font color="#000099">tpIdle</font></td>
+<td>поток выполняется только, когда система&nbsp;— простаивает. Windows не будет
+прерывать другие потоки, чтобы выполнить поток с tpIdle приоритетом.</td>
+</tr>
+<tr>
+<td><font color="#000099">tpLowest</font></td>
+<td>приоритет потока&nbsp;— на два пункта ниже нормального.</td>
+</tr>
+<tr>
+<td><font color="#000099">tpLower</font></td>
+<td>приоритет потока&nbsp;— на один пункт ниже нормального.</td>
+</tr>
+<tr>
+<td><font color="#000099">tpNormal</font></td>
+<td>нормальный приоритет</td>
+</tr>
+<tr>
+<td><font color="#000099">tpHigher</font></td>
+<td>приоритет потока&nbsp;— на один пункт выше нормального.</td>
+</tr>
+<tr>
+<td><font color="#000099">tpHighest</font></td>
+<td>приоритет потока&nbsp;— на два пункта выше нормального.</td>
+</tr>
+<tr>
+<td><font color="#000099">tpTimeCritical</font></td>
+<td>поток получает самый высокий приоритет</td>
+</tr>
+</table>
+<p>Приостановить поток можно методом <font color="#000099">Suspend()</font>, запустить
+поток методом <font color="#000099">Resume()</font><br>
+Выполнение потока автоматически завершается после завершения функции Execute()
+или закрытии приложения.</p>
+<p>Чтобы занятая потоком память освобождалась при завершении потока используйте
+в Execute() <span class="m6">FreeOnTerminate = true;</span><br>
+Однако, возможны ситуации, когда завершение потока должно быть скоординировано
+с другим потоком. Например, Вы должны ждать возвращения значения из одного потока,
+чтобы возвратить это значение в другой поток. Чтобы сделать это, Вы не освобождаете
+первый поток, пока второй поток не получит возвращаемое значение. Вы можете
+обработать эту ситуацию, установив <font color="#000099">FreeOnTerminate=false</font>
+и затем явно освободив первый поток из второго.</p>
+<p>Чтобы прекратить выполнение потока, не дожидаясь его завершения, например из
+другого потока, используйте метод <font color="#000099">Terminate()</font>.<br>
+<span class="m6">Thr-&gt;Terminate();</span><br>
+Метод Terminate() задает значение <strong>true</strong> для свойства <font color="#000099">Terminated</font>,
+то есть Вам самому необходимо в потоке<br>
+(в методе Execute) периодически проверять значение <font color="#000099">Terminated</font>
+и если это значение стало <strong>true</strong>,<br>
+предприянять необходимые действия, например завершить поток, т.е. выйти из Execute()<br>
+Например, так<br><br>
+<span class="m6">void __fastcall TMyThread::Execute()<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FreeOnTerminate = true; // освободить занятую
+потоком память по окончании его работы<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i=0; i&lt;10000; i++)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// -- какие-то сложные вычисления в цикле<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(Terminated) break; // прервать- завершить
+поток<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}</span><br></p>
+<p>В экстремальных ситуациях, для завершения работы потока используйте <strong>API-функцию</strong>
+<font color="#000099">TerminateThread().</font><br>
+Эта функция закрывает текущий поток без освобождения памяти, занятой потоком
+процесса.<br>
+Синтаксис ее: <span class="m6">TerminateThread((HANDLE)Thr-&gt;Handle, false);</span></p>
+<div style="max-width:1200px;margin:20px auto">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9650849142271502" data-ad-slot="6294295879" data-ad-format="horizontal"></ins>
+<script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</div>
+<p><strong>Теперь об особенностях работы потоков в приложениях C++Builder ( бибилиотека<strong>
+VCL )</strong></strong></p>
+<p>Как известно при написании программ на C++Builder (и Delphi) обычно вы пользуетесь
+бибилиотекой <strong>VCL</strong>.<br>
+(например <strong>компонентами </strong>из <strong>палитры компонентов</strong>)<br>
+Когда Вы используете объекты из иерархий VCL или CLX, их свойства и методы,
+<font color="#FF0000">не гарантируется безопасность потока</font>.<br>
+То есть, обращаясь к свойствам или выполняя методы этих объектов, могут выполнятся
+некоторые действия, которые используют память, которая не защищена от действий
+других потоков.<br>
+А значит, <font color="#000099"><em>основной поток библиотеки VCL должен быть
+единственным потоком, управляющим этой библиотекой</em></font>.<br>
+(он-же является первичным потоком вашего приложения)<br>
+Он обрабатывает все сообщения Windows, полученные компонентами в вашем приложении.<br>
+Как-же тогда безопасно из потока получить доступ к управлению свойствами и методами
+VCL-объектов (компонентов) ?<br>
+<strong>Для этого в TThread предусмотрен метод <font color="#000099">Synchronize()</font></strong></p>
+<p class="m6">void __fastcall TMyThread::Execute()<br>
+{<br>
+FreeOnTerminate = true; // освободить занятую потоком память по окончании его
+работы<br>
+for(int i=0; i&lt;10000; i++)<br>
+{<br>
+// -- какие-то сложные вычисления в цикле<br>
+// ---<br>
+if(Terminated) break; // прекратить извне поток<br>
+Synchronize(pb); // позволяет получить доступ к свойствам и методам VCL-объектов<br>
+}<br>
+}<br>
+//---------------------------------------------------------------------------</p>
+<p class="m6">void __fastcall TMyThread::pb()<br>
+{<br>
+static int n = 0;</p>
+<p><span class="m6"> n++;<br>
+Form1-&gt;Label1-&gt;Caption = n;<br>
+Application-&gt;ProcessMessages();<br>
+}<br>
+//-----</span></p>
+<p><br>
+<strong>Обратите внимание</strong>: Поскольку Synchronize использует цикл сообщений,
+это не работает в консольных приложениях. Вы должны использовать другие механизмы,
+типа критических разделов, для защиты доступа к объектам VCL или CLX в консольных
+приложениях</p>
+<p>Не надо использовать <font color="#000099">Synchronize</font> метод для следующих
+объектов:
+<ul>
+<li> &nbsp;Компоненты <font color="#000099">Data access</font> потоко-безопасны
+следующие: Для BDE-доступных наборов данных, каждый поток должен иметь собственный
+компонент сеанса базы данных. Одно исключение к этому&nbsp;— то, когда Вы используете
+драйверы <font color="#000099">Microsoft Access</font>, которые сформированы,
+используя библиотеку Microsoft, которая не потоко-безопасна. Для <font color="#000099">dbDirect</font>,
+пока библиотека клиента потоко-безопасна, dbDirect компоненты будут потоко-безопасны.<br>
+<font color="#000099">ADO</font> и <font color="#000099">InterbaseExpress
+</font>компоненты потоко-безопасны.<br>
+При использовании в потоках компонентов data access, Вы должны быть внимательней.<br>
+Таким образом, например, Вы должны вызывыть Synchronize, которые связывают
+data control с dataset , устанавливая свойство DataSet объекта data source
+, но Вы не должны использовать Synchronize, чтобы обратиться к данным field
+в dataset.<br>
+Для подробной информации об использовании сеансов базы данных с потоками в
+приложениях BDE-enabled, см. <font color="#000066">Managing multiple sessions</font>
+в Help к C++Builder.<br>
+<li>&nbsp;<font color="#000099"> DataCLX</font> объекты потоко-безопасны, хотя
+объекты VisualCLX&nbsp;— нет.<br>
+<li> &nbsp;<font color="#000099">Graphics</font> объекты потоко-безопасны. Вы
+не должны использовать главный VCL или CLX поток, чтобы обратиться к <font color="#000099">TFont,
+TPen, TBrush, TBitmap, TMetafile (VCL только), TDrawing (CLX только), или
+TIcon</font>. Объекты <font color="#000099">Canvas</font> могут использоваться
+вне Synchronize метода, необходимо только блокировать их перед применением
+и освобождать после,<br>
+для этого используются методы <font color="#000099">Lock() </font>и <font color="#000099">Unlock()</font>,
+например так:<br>
+<span class="m6">//---<br>
+Form1-&gt;Canvas-&gt;Lock();<br>
+for(int i=0; i&lt;5000; i++) Form1-&gt;Canvas-&gt;TextOut(20,20, i);<br>
+Form1-&gt;Canvas-&gt;Unlock();<br>
+//---</span><br>
+<li>&nbsp; В то время как объекты списка list не потоко-безопасны,<br>
+Вы можете использовать потоко-безопасную версию, <font color="#000099">TThreadList</font>,
+вместо <font color="#000099">TList</font>.
+</ul>
+<p><strong>Синхронизация потоков.</strong></p>
+<p>Помимо координации работы потоков с помощью приоритетов потоков в приложении
+также часто бывает необходимым синхронизировать потоки. Что имеется ввиду ?<br>
+Координация совместной работы нескольких потоков, если например они пытаются
+<strong>одновременно</strong> что-то сделать,<br>
+например вывести что-либо на форму, получить доступ к глобальным данным и т.д.<br>
+Для этого используются такие объекты, как <font color="#000099">критические
+разделы ( critical section ), мьютексы ( mutex ) ,<br>
+семафоры ( semaphore ), таймеры.</font></p>
+<p><strong>Критические разделы</strong>. (<font color="#000099"> critical section</font>
+)</p>
+<p>Для создания и использования критического раздела, нужно объявить переменную
+типа <font color="#000099">CRITICAL_SECTION</font>,<br>
+в нашем примере в Unit1.h<br>
+...<br>
+<span class="m6">public: // User declarations<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRITICAL_SECTION CS;<br>
+...<br><br>
+</span>// Потом эту переменную <span class="m6">CS</span> нужно инициализировать
+(создать критический раздел)<br>
+<span class="m6">__fastcall TForm1::TForm1(TComponent* Owner)<br>
+: TForm(Owner)<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitializeCriticalSection(&amp;CS);<br>
+}</span><br><br>
+// используем критический раздел в потоке, когда нужно блокировать доступ к
+данным<br>
+<span class="m6">void __fastcall TMyThread::Execute()<br>
+{<br>
+&nbsp;&nbsp;&nbsp;FreeOnTerminate = true; // освободить занятую потоком память
+по окончании его работы<br>
+&nbsp;&nbsp;&nbsp;for(int i=0; i&lt;10000; i++)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// -- какие-то сложные вычисления в цикле<br>
+</span><span class="m6">&nbsp;&nbsp;&nbsp;&nbsp;if(Terminated) break; // прекратить
+извне поток<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EnterCriticalSection(&amp;Form1-&gt;CS); // блокировать
+доступ к данным (войти в критический раздел)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;доступ к глобальным данным<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LeaveCriticalSection(&amp;Form1-&gt;CS); // закрыть
+критический раздел (покинуть критический раздел)<br>
+&nbsp;&nbsp;&nbsp;}<br>
+}</span><br><br>
+Когда критический раздел становиться не нужен, удаляем его<br>
+<span class="m6">void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction
+&amp;Action)<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DeleteCriticalSection(&amp;CS); // удалить критический
+раздел<br>
+}<br>
+</span><br><br>
+<strong>Мьютексы</strong>. (<font color="#000099"> mutex</font> )<br><br>
+Мьютексы выполняются медленнее критических разделов, однако они обладают большими
+возможностями,<br>
+чем критические разделы. Так, например, они могут использоваться разными процессами.<br>
+Создаются они с помощью API-функции<font color="#000099"> CreateMutex()</font>,
+работа с ними также осуществляется с помощью<br>
+API-функций, таких как WaitForSingleObject(), ReleaseMutex(), и др.<br>
+Об использовании мьютексов и семафоров см. <a href="/WinLesson/bles2_2.htm">Разработка
+многопоточных приложений в Windows</a>.</p>
+<div style="max-width:1200px;margin:20px auto">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9650849142271502" data-ad-slot="6294295879" data-ad-format="horizontal"></ins>
+<script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</div>
+<hr>
+<p><strong>Описание класса TThread</strong> ( Находится в <font color="#000099">Classes.hpp</font>
+)<br><br>
+<span class="m6">class DELPHICLASS TThread;<br>
+class PASCALIMPLEMENTATION TThread : public System::TObject<br>
+{<br>
+typedef System::TObject inherited;<br><br>
+private:<br>
+unsigned FHandle;<br>
+unsigned FThreadID;<br>
+bool FCreateSuspended;<br>
+bool FTerminated;<br>
+bool FSuspended;<br>
+bool FFreeOnTerminate;<br>
+bool FFinished;<br>
+int FReturnValue;<br>
+TNotifyEvent FOnTerminate;<br>
+TThreadMethod FMethod;<br>
+System::TObject* FSynchronizeException;<br>
+System::TObject* FFatalException;<br>
+void __fastcall CheckThreadError(int ErrCode)/* overload */;<br>
+void __fastcall CheckThreadError(bool Success)/* overload */;<br>
+void __fastcall CallOnTerminate(void);<br>
+TThreadPriority __fastcall GetPriority(void);<br>
+void __fastcall SetPriority(TThreadPriority Value);<br>
+void __fastcall SetSuspended(bool Value);<br><br>
+protected:<br>
+virtual void __fastcall DoTerminate(void);<br>
+virtual void __fastcall Execute(void) = 0 ;<br>
+void __fastcall Synchronize(TThreadMethod Method);<br>
+__property int ReturnValue = {read=FReturnValue, write=FReturnValue, nodefault};<br>
+__property bool Terminated = {read=FTerminated, nodefault};<br><br>
+public:<br>
+__fastcall TThread(bool CreateSuspended);<br>
+__fastcall virtual ~TThread(void);<br>
+virtual void __fastcall AfterConstruction(void);<br>
+void __fastcall Resume(void);<br>
+void __fastcall Suspend(void);<br>
+void __fastcall Terminate(void);<br>
+unsigned __fastcall WaitFor(void);<br>
+__property System::TObject* FatalException = {read=FFatalException};<br>
+__property bool FreeOnTerminate = {read=FFreeOnTerminate, write=FFreeOnTerminate,
+nodefault};<br>
+__property unsigned Handle = {read=FHandle, nodefault};<br>
+__property TThreadPriority Priority = {read=GetPriority, write=SetPriority,
+nodefault};<br>
+__property bool Suspended = {read=FSuspended, write=SetSuspended, nodefault};<br>
+__property unsigned ThreadID = {read=FThreadID, nodefault};<br>
+__property TNotifyEvent OnTerminate = {read=FOnTerminate, write=FOnTerminate};<br>
+};</span><br><br><br>
+<strong> Основные свойства и методы класса TThread</strong></p>
+<table width="760" border="1">
+<tr>
+<td width="138"><strong>Свойство</strong></td>
+<td width="606"><strong>Описание</strong></td>
+</tr>
+<tr>
+<td>FreeOnTerminate</td>
+<td>Указывает, будет ли объект потока автоматически удален при завершении
+работы потока</td>
+</tr>
+<tr>
+<td>Handle</td>
+<td>Дескриптор потока, для вызова API-функций</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>Задает приоритет потока</td>
+</tr>
+<tr>
+<td>ReturnValue</td>
+<td>Определяет значение, возвращаемое другим потокам, после завершения текущего
+потока </td>
+</tr>
+<tr>
+<td>Suspended</td>
+<td>Указывает, приостановлено-ли выполнение потока</td>
+</tr>
+<tr>
+<td>Terminated</td>
+<td>Определяет, может ли прекращаться выполнение потока</td>
+</tr>
+<tr>
+<td>ThreadID</td>
+<td>Определяет идентификатор потока</td>
+</tr>
+</table><br>
+<table width="760" border="1">
+<tr>
+<td width="139"><strong>Метод</strong></td>
+<td width="611"><strong>Описание</strong></td>
+</tr>
+<tr>
+<td>DoTerminate()</td>
+<td>Вызывает обработчик события OnTerminate() без прекращения работы потока</td>
+</tr>
+<tr>
+<td>Execute()</td>
+<td>Содержит код, который будет выполнен при запуске потока</td>
+</tr>
+<tr>
+<td>Resume()</td>
+<td>Возобновляет работу приостановленного потока</td>
+</tr>
+<tr>
+<td>Suspend()</td>
+<td>Приостанавливает работу потока</td>
+</tr>
+<tr>
+<td>Synchronize()</td>
+<td>Выполняет вызов в первичном потоке библиотеки VCL</td>
+</tr>
+<tr>
+<td>Terminate()</td>
+<td>Сигнализирует о прекращении выполнения потока</td>
+</tr>
+<tr>
+<td>WaitFor()</td>
+<td>Ждет прекращения работы потока</td>
+</tr>
+</table>
+есть и другие менее используемые свойства и методы.
+<p><strong>Предупреждение:</strong> исключения, которые возбуждены, но не перехвачены
+в TThread потомке при выполнении в методе Execute могут стать причиной <font color="#000099">access
+violations</font>, когда Вы выполняете приложение вне интегрированной среды
+разработки. Вы можете принять меры против этого <font color="#000099">access
+violation</font>, обеспечив метод Execute блоком <strong>try.._finally</strong>,
+который включает тело этого метода.<br><br>
+<a href="/prim/Thr.rar"><span class="my">Пример работы простого многопоточного
+приложения (C++Builder 6).</span></a></p>
+<div style="max-width:1200px;margin:20px auto">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9650849142271502" data-ad-slot="6294295879" data-ad-format="horizontal"></ins>
+<script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</div>
+<p><hr align="center" width=95% size=1></p>
+</div>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(54382945,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/54382945" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

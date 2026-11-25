@@ -1,0 +1,100 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 15	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+<HEAD>
+<TITLE>
+WITS - Record 15
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 15 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 15   :  CUTTINGS / LITHOLOGY</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  15<TD WIDTH=200><B>Logical Record Type </B>  165
+                   <TD WIDTH=200><B>Auto/Manual</B> MANUAL 
+<TR><TD COLSPAN=3><B>Trigger</B>   [EVENT]    Transmission is operator-initiated 
+<TR><TD COLSPAN=3><B>Data Source</B> Manually-entered data from sample examination sent when new data values are available 
+</TABLE>
+<P>
+
+<TABLE BORDER = 5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(2).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2	<TD><A HREF = "../index(2).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3	<TD><A HREF = "../index(2).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4	<TD><A HREF = "../index(2).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5	<TD><A HREF = "../index(2).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6	<TD><A HREF = "../index(2).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7	<TD><A HREF = "../index(2).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8	<TD><A HREF = "../index(2).htm#appb15.8">Depth Sample (meas)	<TD>DEPTSAMM	<TD>DSAM	<TD>F 	<TD>4<TD>	M	<TD>F
+<TR><TD>9	<TD><A HREF = "../index(2).htm#appb15.9">Depth Sample (vert)	<TD>DEPTSAMV	<TD>DSAV	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>10	<TD><A HREF = "../index(2).htm#appb15.10">Description type	<TD>DESCTYPE	<TD>DESC	<TD>A 	<TD>8	<TD>----	<TD>----
+<TR><TD>11	<TD><A HREF = "../index(2).htm#appb15.11">Lith 1 type	<TD>L1TYPE	<TD>L1TY	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>12	<TD><A HREF = "../index(2).htm#appb15.12">Lith 1 %	<TD>L1PERC	<TD>L1PC	<TD>S<TD>2	<TD>%	<TD>%
+<TR><TD>13	<TD><A HREF = "../index(2).htm#appb15.13">Lith 1 classification	<TD>L1CLASS	<TD>L1CL	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>14	<TD><A HREF = "../index(2).htm#appb15.14">Lith 1 color	<TD>L1COLOR<TD>	L1CO	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>15	<TD><A HREF = "../index(2).htm#appb15.15">Lith 1 texture	<TD>L1TEXT<TD>	L1TX	<TD>A 	<TD>16<TD>	----	<TD>----
+<TR><TD>16	<TD><A HREF = "../index(2).htm#appb15.16">Lith 1 hardness	<TD>L1HARD	<TD>L1HD	<TD>A 	<TD>16	<TD>----<TD>	----
+<TR><TD>17	<TD><A HREF = "../index(2).htm#appb15.17">Lith 1 grain size	<TD>L1SIZE	<TD>L1SZ	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>18	<TD><A HREF = "../index(2).htm#appb15.18">Lith 1 roundness	<TD>L1ROUND	<TD>L1RD	<TD>A <TD>	16	<TD>----	<TD>----
+<TR><TD>19	<TD><A HREF = "../index(2).htm#appb15.19">Lith 1 sorting	<TD>L1SORT	<TD>L1SO	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>20	<TD><A HREF = "../index(2).htm#appb15.20">Lith 1 matrix/cement	<TD>L1MATCEM	<TD>L1MC	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>21	<TD><A HREF = "../index(2).htm#appb15.21">Lith 1 accessories	<TD>L1ACC	<TD>L1AC	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>22	<TD><A HREF = "../index(2).htm#appb15.22">Lith 1 porosity	<TD>L1POR	<TD>L1PO	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>23	<TD><A HREF = "../index(2).htm#appb15.23">Lith 1 permeability	<TD>L1PERM	<TD>L1PE	<TD>F 	<TD>4	<TD>MD	<TD>MD
+<TR><TD>24	<TD><A HREF = "../index(2).htm#appb15.24">Lith 2 type	<TD>L2TYPE	<TD>L2TY	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>25	<TD><A HREF = "../index(2).htm#appb15.25">Lith 2 %<TD>	L2PERC	<TD>L2PC	<TD>S 	<TD>2	<TD>%	<TD>%
+<TR><TD>26	<TD><A HREF = "../index(2).htm#appb15.26">Lith 2 classification	<TD>L2CLASS	<TD>L2CL	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>27	<TD><A HREF = "../index(2).htm#appb15.27">Lith 2 color	<TD>L2COLOR	<TD>L2CO	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>28	<TD><A HREF = "../index(2).htm#appb15.28">Lith 2 texture	<TD>L2TEXT	<TD>L2TX	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>29	<TD><A HREF = "../index(2).htm#appb15.29">Lith 2 hardness	<TD>L2HARD	<TD>L2HD	<TD>A 	<TD>16	<TD>----<TD>	----
+<TR><TD>30	<TD><A HREF = "../index(2).htm#appb15.30">Lith 2 grain size	<TD>L2SIZE	<TD>L2SZ	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>31	<TD><A HREF = "../index(2).htm#appb15.31">Lith 2 roundness	<TD>L2ROUND	<TD>L2RD	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>32	<TD><A HREF = "../index(2).htm#appb15.32">Lith 2 sorting	<TD>L2SORT	<TD>L2SO	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>33	<TD><A HREF = "../index(2).htm#appb15.33">Lith 2 matrix/cement	<TD>L2MATCEM	<TD>L2MC	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>34	<TD><A HREF = "../index(2).htm#appb15.34">Lith 2 accessories<TD>	L2ACC	<TD>L2AC	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>35	<TD><A HREF = "../index(2).htm#appb15.35">Lith 2 porosity	<TD>L2POR	<TD>L2PO	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>36	<TD><A HREF = "../index(2).htm#appb15.36">Lith 2 permeability	<TD>L2PERM	<TD>L2PE	<TD>F 	<TD>4	<TD>MD	<TD>MD
+<TR><TD>37	<TD><A HREF = "../index(2).htm#appb15.37">Lith 3 type	<TD>L3TYPE	<TD>L3TY	<TD>A 	<TD>16	<TD>----	-<TD>---
+<TR><TD>38	<TD><A HREF = "../index(2).htm#appb15.38">Lith 3 %	<TD>L3PERC	<TD>L3PC	<TD>S 	<TD>2	<TD>%	<TD>%
+<TR><TD>39	<TD><A HREF = "../index(2).htm#appb15.39">Lith 3 classification	<TD>L3CLASS	<TD>L3CL	<TD>A 	<TD>16	<TD>----<TD>	----
+<TR><TD>40	<TD><A HREF = "../index(2).htm#appb15.40">Lith 4 type	<TD>L4TYPE	<TD>L4TY	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>41	<TD><A HREF = "../index(2).htm#appb15.41">Lith 4 %	<TD>L4PERC	<TD>L4PC	<TD>S <TD>	2	<TD>%	<TD>%
+<TR><TD>42	<TD><A HREF = "../index(2).htm#appb15.42">Lith 4 classification	<TD>L4CLASS	<TD>L4CL	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>43	<TD><A HREF = "../index(2).htm#appb15.43">Lith 5 type<TD>	L5TYPE	<TD>L5TY	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>44	<TD><A HREF = "../index(2).htm#appb15.44">Lith 5 %	<TD>L5PERC	<TD>L5PC	<TD>S 	<TD>2	<TD>%	<TD>%
+<TR><TD>45	<TD><A HREF = "../index(2).htm#appb15.45">Lith 5 classification	<TD>L5CLASS	<TD>L5CL	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>46	<TD><A HREF = "../index(2).htm#appb15.46">Fossils	<TD>FOSS	<TD>FOSS	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>47	<TD><A HREF = "../index(2).htm#appb15.47">Composite Show	<TD>COMPSHOW	<TD>SHOW	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>48	<TD><A HREF = "../index(2).htm#appb15.48">Bulk Density	<TD>BULKDEN	<TD>BDEN	<TD>F 	<TD>4	<TD>G/CC	<TD>G/CC
+<TR><TD>49	<TD><A HREF = "../index(2).htm#appb15.49">Cuttings Gas	<TD>GASCUTT	<TD>GCUT	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>50	<TD><A HREF = "../index(2).htm#appb15.50">Calcimetry Calcite %	<TD>CCAL	<TD>CCAL	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>51	<TD><A HREF = "../index(2).htm#appb15.51">Calcimetry Dolomite %	<TD>CDOL	<TD>CDOL	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>52	<TD><A HREF = "../index(2).htm#appb15.52">Cuttings CEC	<TD>CEC	<TD>CEC	<TD>F 	<TD>4	<TD>MEHG	<TD>MEHG
+<TR><TD>53	<TD><A HREF = "../index(2).htm#appb15.53">Cavings %	<TD>CAVINGS	<TD>CAV	<TD>S 	<TD>2	<TD>%	<TD>%
+<TR><TD>54	<TD><A HREF = "../index(2).htm#appb15.54">Shale Density	<TD>SHALEDEN	<TD>SDEN	<TD>F 	<TD>4	<TD>G/CC	<TD>G/CC
+<TR><TD>55<TD><A HREF = "../index(2).htm#appb15.55">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>56<TD><A HREF = "../index(2).htm#appb15.55">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>57<TD><A HREF = "../index(2).htm#appb15.55">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>58<TD><A HREF = "../index(2).htm#appb15.55">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>59<TD><A HREF = "../index(2).htm#appb15.55">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>

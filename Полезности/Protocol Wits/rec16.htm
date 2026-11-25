@@ -1,0 +1,87 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 16	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+
+<HEAD>
+<TITLE>
+WITS - Record 16
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 16 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 16   :  HYDROCARBON SHOW</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  16 <TD WIDTH=200><B>Logical Record Type </B>  166
+                   <TD WIDTH=200><B>Auto/Manual</B> MANUAL 
+<TR><TD COLSPAN=3><B>Trigger</B>   [EVENT] Transmission is operator-initiated
+<TR><TD COLSPAN=3><B>Data Source</B> Manually-entered data when a hydrocarbon show is detected.  Sent when new data values are available.
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(3).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2	<TD><A HREF = "../index(3).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3	<TD><A HREF = "../index(3).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4	<TD><A HREF = "../index(3).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5	<TD><A HREF = "../index(3).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6	<TD><A HREF = "../index(3).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7	<TD><A HREF = "../index(3).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8	<TD><A HREF = "../index(3).htm#appb6.8">Show Number	<TD>SHOWNUM	<TD>SWNO	<TD>S 	<TD>2	<TD>----	<TD>----
+<TR><TD>9	<TD><A HREF = "../index(3).htm#appb16.9">Show Intvl Top Depth (meas)	<TD>DEPTSITM	<TD>DSTM	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>10	<TD><A HREF = "../index(3).htm#appb16.10">Show Intvl Top Depth (vert)	<TD>DEPTSITV	<TD>DSTV	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>11	<TD><A HREF = "../index(3).htm#appb16.11">Show Intvl Bott Depth(meas)	<TD>DEPTSIBM	<TD>DSBM	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>12	<TD><A HREF = "../index(3).htm#appb16.12">Show Intvl Bott Depth(vert)	<TD>DEPTSIBV	<TD>DSBV	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>13	<TD><A HREF = "../index(3).htm#appb16.13">Show Lith type	<TD>SHLTYPE	<TD>WLTY	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>14	<TD><A HREF = "../index(3).htm#appb16.14">Show Lith classification	<TD>SHLCLASS	<TD>WLCL	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>15	<TD><A HREF = "../index(3).htm#appb16.15">Show Lith color	<TD>SHLCOLOR	<TD>WLCO	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>16	<TD><A HREF = "../index(3).htm#appb16.16">Show Lith texture	<TD>SHLTEXT	<TD>WLTX	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>17	<TD><A HREF = "../index(3).htm#appb16.17">Show Lith hardness	<TD>SHLHARD	<TD>WLHD	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>18	<TD><A HREF = "../index(3).htm#appb16.18">Show Lith grain size	<TD>SHLSIZE	<TD>WLSZ	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>19	<TD><A HREF = "../index(3).htm#appb16.19">Show Lith roundness	<TD>SHLROUND	<TD>WLRD	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>20	<TD><A HREF = "../index(3).htm#appb16.20">Show Lith sorting	<TD>SHLSORT	<TD>WLSO	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>21	<TD><A HREF = "../index(3).htm#appb16.21">Show Lith matrix/cement	<TD>SHLMC	<TD>WLMC	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>22	<TD><A HREF = "../index(3).htm#appb16.22">Show Lith accessories	<TD>SHLACC	<TD>WLAC	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>23	<TD><A HREF = "../index(3).htm#appb16.23">Show Lith porosity -visible	<TD>SHLPORV	<TD>WLPV	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>24	<TD><A HREF = "../index(3).htm#appb16.24">Show Lith porosity -meas	<TD>SHLPORM	<TD>WLPM	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>25	<TD><A HREF = "../index(3).htm#appb16.25">Show Lith permeability	<TD>SHLPERM	<TD>WLPE	<TD>F 	<TD>4	<TD>MD	<TD>MD
+<TR><TD>26	<TD><A HREF = "../index(3).htm#appb16.26">Show Lith stain description	<TD>SHLSTAIN	<TD>WLST	<TD>A 	<TD>64	<TD>----	<TD>----
+<TR><TD>27	<TD><A HREF = "../index(3).htm#appb16.27">Show Lith fluor description	<TD>SHLFLUOR	<TD>WLFL	<TD>A 	<TD>64	<TD>----	<TD>----
+<TR><TD>28	<TD><A HREF = "../index(3).htm#appb16.28">Show Lith cut description	<TD>SHLCUT	<TD>WLCT	<TD>A 	<TD>64	<TD>----	<TD>----
+<TR><TD>29	<TD><A HREF = "../index(3).htm#appb16.29">Show Lith cuttings gas	<TD>SHLGCUT	<TD>WLGC	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>30	<TD><A HREF = "../index(3).htm#appb16.30">Show titrated salinity	<TD>SHSAL	<TD>WSAL	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>31	<TD><A HREF = "../index(3).htm#appb16.31">Show Mud Smple Methane	<TD>METHMUD	<TD>MTHM	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>32	<TD><A HREF = "../index(3).htm#appb16.32">Show Mud Smple Ethane	<TD>ETHMUD	<TD>ETHM	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>33	<TD><A HREF = "../index(3).htm#appb16.33">Show Mud Smple Propane	<TD>PROPMUD	<TD>PRPM	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>34	<TD><A HREF = "../index(3).htm#appb16.34">Show Mud Smple I-Butane	<TD>IBUTMUD	<TD>IBTM	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>35	<TD><A HREF = "../index(3).htm#appb16.35">Show Mud Smple N-Butane	<TD>NBUTMUD	<TD>NBTM	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>36	<TD><A HREF = "../index(3).htm#appb16.36">Show Mud Smple I-Pentane	<TD>IPENMUD	<TD>IPNM	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>37	<TD><A HREF = "../index(3).htm#appb16.37">Show Mud Smple N-Pentane	<TD>NPENMUD	<TD>NPNM	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>38	<TD><A HREF = "../index(3).htm#appb16.38">Show Mud Smple N-Pentane	<TD>EPENMUD	<TD>EPNM	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>39	<TD><A HREF = "../index(3).htm#appb16.39">Show Mud Smple I-Hexane	<TD>IHEXMUD	<TD>IHXM	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>40	<TD><A HREF = "../index(3).htm#appb16.40">Show Mud Smple N-Hexane	<TD>NHEXMUD	<TD>NHXM	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>41	<TD><A HREF = "../index(3).htm#appb16.41">Show Comments	<TD>SHOWCOMM	<TD>WCOM	<TD>A 	<TD>128	<TD>----<TD>	----
+<TR><TD>42<TD><A HREF = "../index(3).htm#appb16.42">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>43<TD><A HREF = "../index(3).htm#appb16.42">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>44<TD><A HREF = "../index(3).htm#appb16.42">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>45<TD><A HREF = "../index(3).htm#appb16.42">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>46<TD><A HREF = "../index(3).htm#appb16.42">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>

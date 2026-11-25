@@ -1,0 +1,99 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 8	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+
+<HEAD>
+<TITLE>
+WITS - Record 8
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 8 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 8   :  MWD FORMATION EVALUATION</h3>
+
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  8 <TD WIDTH=200><B>Logical Record Type </B>  158
+                   <TD WIDTH=200><B>Auto/Manual</B> AUTOMATIC
+<TR><TD COLSPAN=3><B>Trigger</B>   [TIME], [DEPTH] or [TIME/DEPTH]     Transmit at specified time interval (secs),  depth interval (feet or meters) based on hole depth when drilling new hole or making a new pass, or a combination of these.
+<TR><TD COLSPAN=3><B>Data Source</B> Data acquired in real-time and computed over the trigger interval.  Record transmitted and computations reset when triggering interval occurs.  If DEPTH-triggered, then only on-bottom data is included in computations.  Depths of MWD sensors transmitted in the record are the depths for the last valid reading for that sensor.  Record is not sent if not circulating or tool is not operating
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "index(1).htm">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "index(1).htm">Metric Units
+<TH ALIGN CENTER><A HREF = "index(1).htm">FPS Units
+	
+<TR><TD>1<TD><A HREF = "index(1).htm">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2<TD><A HREF = "index(1).htm">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3<TD><A HREF = "index(1).htm">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4<TD><A HREF = "index(1).htm">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5<TD><A HREF = "index(1).htm">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6<TD><A HREF = "index(1).htm">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7<TD><A HREF = "index(1).htm">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8	<TD><A HREF = "index(1).htm">Depth Hole (meas)	<TD>DEPTMEAS	<TD>DMEA<TD>	F <TD>	4	<TD>M	<TD>F
+<TR><TD>9	<TD><A HREF = "index(1).htm">Depth Hole (vert)	<TD>DEPTVERT	<TD>DVER	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>10	<TD><A HREF = "index(1).htm">Depth Bit  (meas)	<TD>DEPTBITM	<TD>DBTM<TD>	F 	<TD>4	<TD>M	<TD>F
+<TR><TD>11	<TD><A HREF = "index(1).htm">Depth Bit  (vert)	<TD>DEPTBITV	<TD>DBTV	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>12	<TD><A HREF = "index(1).htm">Pass Number	<TD>PASSNUM	<TD>PASS	<TD>S <TD>	2	<TD>----<TD>	----
+<TR><TD>13	<TD><A HREF = "index(1).htm">Depth Resis 1 sensor (meas)	<TD>DEPTRS1M	<TD>DR1M	<TD>F <TD>	4<TD>	M<TD>	F
+<TR><TD>14	<TD><A HREF = "index(1).htm">Depth Resis 1 sensor (vert)	<TD>DEPTRS1V	<TD>DR1V	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>15	<TD><A HREF = "index(1).htm">Resis 1 reading	<TD>MR1<TD>	MR1<TD>	F<TD> 	4	<TD>OHMM	<TD>OHMM
+<TR><TD>16	<TD><A HREF = "index(1).htm">Resis 1 (borehole corr)	<TD>MR1C	<TD>MR1C	<TD>F 	<TD>4	<TD>OHMM	<TD>OHMM
+<TR><TD>17	<TD><A HREF = "index(1).htm">Depth Resis 2 sensor (meas)	<TD>DEPTRS2M	<TD>DR2M	<TD>F <TD>	4	<TD>M<TD>	F
+<TR><TD>18	<TD><A HREF = "index(1).htm">Depth Resis 2 sensor (vert)	<TD>DEPTRS2V	<TD>DR2V<TD>	F <TD>	4	<TD>M<TD>	F
+<TR><TD>19	<TD><A HREF = "index(1).htm">Resis 2 reading	<TD>MR2	<TD>MR2<TD>	F<TD> 	4	<TD>OHMM	<TD>OHMM
+<TR><TD>20	<TD><A HREF = "index(1).htm">Resis 2 (borehole corr)	<TD>MR2C	<TD>MR2C	<TD>F 	<TD>4	<TD>OHMM	<TD>OHMM
+<TR><TD>21	<TD><A HREF = "index(1).htm">Depth G.Ray 1 sensor(meas)	<TD>DEPTGR1M	<TD>DG1M	<TD>F<TD> 	4	<TD>M	<TD>F
+<TR><TD>22	<TD><A HREF = "index(1).htm">Depth G.Ray 1 sensor(vert)	<TD>DEPTGR1V	<TD>DG1V	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>23	<TD><A HREF = "index(1).htm">Gamma Ray 1 reading	<TD>MG1	<TD>MG1	<TD>F 	<TD>4	<TD>API	<TD>API
+<TR><TD>24	<TD><A HREF = "index(1).htm">Gamma Ray 1(borehole corr)	<TD>MG1C	<TD>MG1C	<TD>F <TD>	4<TD>	API	<TD>API
+<TR><TD>25	<TD><A HREF = "index(1).htm">Depth G.Ray 2 sensor(meas)	<TD>DEPTGR2M	<TD>DG2M	<TD>F 	<TD>4	<TD>M<TD>	F
+<TR><TD>26	<TD><A HREF = "index(1).htm">Depth G.Ray 2 sensor(vert)	<TD>DEPTGR2V	<TD>DG2V<TD>	F <TD>	4	<TD>M<TD>	F
+<TR><TD>27	<TD><A HREF = "index(1).htm">Gamma Ray 2 reading	<TD>MG2	<TD>MG2	<TD>F 	<TD>4	<TD>API	<TD>API
+<TR><TD>28	<TD><A HREF = "index(1).htm">Gamma Ray 2(borehole corr)	<TD>MG2C	<TD>MG2C	<TD>F 	<TD>4	<TD>API	<TD>API
+<TR><TD>29	<TD><A HREF = "index(1).htm">Depth Por 1 sensor (meas)	<TD>DEPTP1M	<TD>DP1M	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>30	<TD><A HREF = "index(1).htm">Depth Por 1 sensor (vert)	<TD>DEPTP1V	<TD>DP1V	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>31	<TD><A HREF = "index(1).htm">Porosity Tool 1 reading	<TD>MPO1	<TD>MPO1	<TD>F 	<TD>4	<TD>----	<TD>----
+<TR><TD>32	<TD><A HREF = "index(1).htm">Depth Por 2 sensor (meas)	<TD>DEPTP2M	<TD>DP2M	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>33	<TD><A HREF = "index(1).htm">Depth Por 2 sensor (vert)	<TD>DEPTP2V	<TD>DP2V	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>34	<TD><A HREF = "index(1).htm">Porosity Tool 2 reading	<TD>MPO2	<TD>MPO2	<TD>F 	<TD>4	<TD>----	<TD>----
+<TR><TD>35	<TD><A HREF = "index(1).htm">Downhole Fluid Temp (ann)	<TD>MFTANN	<TD>MFTA	<TD>F <TD>	4	<TD>DEGC	<TD>DEGF
+<TR><TD>36	<TD><A HREF = "index(1).htm">Downhole Fluid Temp (pipe)	<TD>MFTPIPE	<TD>MFTP	<TD>F 	<TD>4	<TD>DEGC	<TD>DEGF
+<TR><TD>37	<TD><A HREF = "index(1).htm">Downhole Fluid Resis (ann)	<TD>MFRANN	<TD>MFRA	<TD>F 	<TD>4	<TD>OHMM	<TD>OHMM
+<TR><TD>38	<TD><A HREF = "index(1).htm">Downhole Fluid Resis (pipe)	<TD>MFRPIPE	<TD>MFRP	<TD>F 	<TD>4	<TD>OHMM	<TD>OHMM
+<TR><TD>39	<TD><A HREF = "index(1).htm">Depth Form Density (meas)	<TD>DEPTFDM	<TD>DFDM	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>40	<TD><A HREF = "index(1).htm">Depth Form Density (vert)	<TD>DEPTFDV	<TD>DFDV	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>41	<TD><A HREF = "index(1).htm">Formation Density	<TD>MFD	<TD>MFD	<TD>F 	<TD>4	<TD>G/CC	<TD>G/CC	
+<TR><TD>42	<TD><A HREF = "index(1).htm">Depth Caliper (meas)	<TD>DEPTCALM	<TD>DCLM	<TD>F <TD>	4	<TD>M	<TD>F
+<TR><TD>43	<TD><A HREF = "index(1).htm">Depth Caliper (vert)	<TD>DEPTCALV	<TD>DCLV	<TD>F 	<TD>4	<TD>M<TD>	F
+<TR><TD>44	<TD><A HREF = "index(1).htm">Caliper	<TD>MCLP	<TD>MCLP	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>45	<TD><A HREF = "index(1).htm">Pore Pressure Grad MWD	<TD>MFPP	<TD>MFPP	<TD>F <TD>	4	<TD>KGM3	<TD>PPG
+<TR><TD>46	<TD><A HREF = "index(1).htm">Frac Pressure Grad MWD	<TD>MFFP	<TD>MFFP	<TD>F 	<TD>4	<TD>KGM3<TD>	PPG
+<TR><TD>47<TD><A HREF = "index(1).htm">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>48<TD><A HREF = "index(1).htm">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>49<TD><A HREF = "index(1).htm">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>50<TD><A HREF = "index(1).htm">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>51<TD><A HREF = "index(1).htm">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+<TR><TD>52<TD><A HREF = "index(1).htm">< SPARE 6 ><TD>SPARE6<TD>SPR6<TD>F<TD>4<TD>----<TD>----
+<TR><TD>53<TD><A HREF = "index(1).htm">< SPARE 7 ><TD>SPARE7<TD>SPR7<TD>F<TD>4<TD>----<TD>----
+<TR><TD>54<TD><A HREF = "index(1).htm">< SPARE 8 ><TD>SPARE8<TD>SPR8<TD>F<TD>4<TD>----<TD>----
+<TR><TD>55<TD><A HREF = "index(1).htm">< SPARE 9 ><TD>SPARE9<TD>SPR9<TD>F<TD>4<TD>----<TD>----
+
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>
+

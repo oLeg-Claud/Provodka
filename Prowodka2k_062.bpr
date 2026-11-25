@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Prowodka2k_062.exe"/>
+    <OBJFILES value="Prowodka2k_062.obj YCO8_1.obj FKIH1.obj FKIH1_8.obj FKIH2.obj FKIH3.obj 
+      FKIH5.obj FKIH7.obj FKIH10.obj ComPort.obj LThread.obj PBThread.obj 
+      KORDAT2k.obj TRAEKT2k.obj"/>
+    <RESFILES value="Prowodka4_6.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) TRAEKT2k.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="inet.lib bcb2kaxserver.lib indy.lib dbxcds.lib dclocx.lib soaprtl.lib 
+      bcbie.lib nmfast.lib dbexpress.lib inetdbxpress.lib inetdbbde.lib 
+      dsnapcon.lib dsnapcrba.lib visualdbclx.lib teeqr.lib dss.lib teedb.lib 
+      teeui.lib qrpt.lib bdecds.lib cds.lib ibxpress.lib vcldbx.lib bdertl.lib 
+      adortl.lib vcldb.lib vclx.lib bcbsmp.lib tee.lib vcl.lib rtl.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib tee.lib bcbsmp.lib vclx.lib vcldb.lib adortl.lib 
+      bdertl.lib vcldbx.lib ibxpress.lib cds.lib bdecds.lib qrpt.lib teeui.lib 
+      teedb.lib dss.lib teeqr.lib visualdbclx.lib dsnapcrba.lib dsnapcon.lib 
+      inetdbbde.lib inetdbxpress.lib dbexpress.lib nmfast.lib bcbie.lib 
+      soaprtl.lib dclocx.lib dbxcds.lib indy.lib bcb2kaxserver.lib inet.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi vcldb.bpi adortl.bpi 
+      ibsmp.bpi bdertl.bpi vcldbx.bpi qrpt.bpi teeui.bpi teedb.bpi tee.bpi 
+      dss.bpi teeqr.bpi ibxpress.bpi dsnap.bpi vclie.bpi inetdb.bpi inet.bpi 
+      nmfast.bpi webdsnap.bpi bcbie.bpi dclocx.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="Prowodka2k_062.cpp"/>
+    <INCLUDEPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;$(BCB)\include;$(BCB)\include\vcl;D:\C++\Lib;&quot;C:\Program Files\Borland\CBuilder6\Source\Indy&quot;"/>
+    <LIBPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; -I$(BCB)\include 
+      -I$(BCB)\include\vcl -ID:\C++\Lib 
+      -I&quot;C:\Program Files\Borland\CBuilder6\Source\Indy&quot; -src_suffix cpp -boa"/>
+    <CFLAG1 value="-Od -H=c:\PROGRA~1\BORLAND\CBUILD~2\lib\vcl60.csm -Hc -w- -Vx -Ve -X- -a1 
+      -b- -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Prowodka2k_062.cpp" FORMNAME="" UNITNAME="Prowodka2k_062" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="YCO8_1.cpp" FORMNAME="" UNITNAME="YCO8_1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FKIH1.CPP" FORMNAME="" UNITNAME="FKIH1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FKIH1_8.CPP" FORMNAME="" UNITNAME="FKIH1_8" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FKIH2.CPP" FORMNAME="" UNITNAME="FKIH2" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FKIH3.CPP" FORMNAME="" UNITNAME="FKIH3" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FKIH5.CPP" FORMNAME="" UNITNAME="FKIH5" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FKIH7.CPP" FORMNAME="" UNITNAME="FKIH7" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FKIH10.CPP" FORMNAME="" UNITNAME="FKIH10" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ComPort.pas" FORMNAME="" UNITNAME="ComPort" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Prowodka4_6.res" FORMNAME="" UNITNAME="Prowodka4_6.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LThread.cpp" FORMNAME="" UNITNAME="LThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PBThread.cpp" FORMNAME="" UNITNAME="PBThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="KORDAT2k.cpp" FORMNAME="" UNITNAME="KORDAT2k" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TRAEKT2k.cpp" FORMNAME="Fr45" UNITNAME="TRAEKT2k" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+c:\program files\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
+[HistoryLists\hlIncludePath]
+Count=30
+Item0=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;D:\C++\Lib;C:\Program Files\Borland\CBuilder6\Source\Indy
+Item1=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;D:\C++\Lib
+Item2=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item3=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;D:\C++\Проводка4_67
+Item4=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;D:\C++\Проводка4_64
+Item5=$(BCB)\include;$(BCB)\include\vcl;D:\C++\Проводка4_64
+Item6=$(BCB)\include;$(BCB)\include\vcl;D:\C++\Проводка4_63
+Item7=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl
+Item8=..\Проводка4_4\настройка АМД;..\Настройка AMD-200;..\Проводка4_7;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl
+Item9=..\Настройка AMD-200;..\Проводка4_7;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД
+Item10=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД
+Item11=..\Настройка AMD_2.07-1;..\Настройка AMD-200;..\Проводка4_7;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД;D:\C++\Проводка4_4
+Item12=..\Проводка4_7;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД;D:\C++\Проводка4_4
+Item13=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД;D:\C++\Проводка4_4
+Item14=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД;..\Проводка4_4
+Item15=C:\provodka4_4\provodka4_4\настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД;..\Проводка4_4;..\provodka4_4\настройка АМД
+Item16=C:\provodka4_4\provodka4_4\настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД;..\Проводка4_4;D:\C++\Проводка4_6;..\provodka4_4\настройка АМД
+Item17=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД;..\Проводка4_4;D:\C++\Проводка4_6;..\provodka4_4\настройка АМД
+Item18=..\provodka4_4\настройка АМД;C:\provodka4_4\provodka4_4\настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД;..\Проводка4_4;D:\C++\Проводка4_6
+Item19=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;..\Проводка4_4\настройка АМД;..\Проводка4_4;D:\C++\Проводка4_6
+Item20=..\provodka4_4\настройка АМД;..\provodka4_4;C:\provowka4_6;C:\;C:\provodka4_5;C:\provodka4_4\provodka4_4\настройка АМД;C:\provodka4_4\provodka4_4;настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;D:\gorisont\provodka4_4
+Item21=..\provodka4_4;C:\provowka4_6;C:\;C:\provodka4_5;C:\provodka4_4\provodka4_4\настройка АМД;C:\provodka4_4\provodka4_4;настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;D:\gorisont\provodka4_4
+Item22=C:\provowka4_6;C:\;C:\provodka4_5;C:\provodka4_4\provodka4_4\настройка АМД;C:\provodka4_4\provodka4_4;настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;D:\gorisont\provodka4_4
+Item23=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;D:\gorisont\provodka4_4
+Item24=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;D:\gorisont\provodka4_4;D:\gorisont\provodka4_4\настройка АМД
+Item25=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;D:\gorisont\provodka4_3;D:\gorisont\provodka4_3\настройка АМД
+Item26=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;D:\gorisont\provodka4_3;D:\gorisont\provodka4_3\настройка АМД
+Item27=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;D:\GORIZONT\provodka4_2;D:\GORIZONT\provodka4_2\настройка АМД
+Item28=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;D:\GORIZONT\provodka4_2;D:\GORIZONT\provodka4_2\настройка АМД
+Item29=..\provodka4_1\настройка АМД;..\provodka4_1;настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\include;$(BCB)\include\vcl;D:\GORIZONT\provodka4_2
+
+[HistoryLists\hlLibraryPath]
+Count=30
+Item0=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Item1=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;D:\C++\Lib
+Item2=$(BCB)\lib\obj;$(BCB)\lib
+Item3=..\Проводка4_4\настройка АМД;..\Настройка AMD-200;..\Проводка4_7;$(BCB)\lib\obj;$(BCB)\lib
+Item4=..\Проводка4_4\настройка АМД;..\Настройка AMD-200;..\Проводка4_7;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib
+Item5=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib
+Item6=..\Настройка AMD_2.07-1;..\Настройка AMD-200;..\Проводка4_7;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;..\Проводка4_4\настройка АМД;..\Проводка4_4
+Item7=..\Проводка4_7;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;..\Проводка4_4\настройка АМД;..\Проводка4_4
+Item8=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;..\Проводка4_4\настройка АМД;..\Проводка4_4
+Item9=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;..\Проводка4_4\настройка АМД;..\Проводка4_4;D:\C++\Проводка4_6;C:\provodka4_4\provodka4_4\настройка АМД
+Item10=C:\provodka4_4\provodka4_4\настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;..\Проводка4_4\настройка АМД;..\Проводка4_4;D:\C++\Проводка4_6;..\provodka4_4\настройка АМД
+Item11=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;..\Проводка4_4\настройка АМД;..\Проводка4_4;D:\C++\Проводка4_6;..\provodka4_4\настройка АМД
+Item12=..\provodka4_4\настройка АМД;C:\provodka4_4\provodka4_4\настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;..\Проводка4_4\настройка АМД;..\Проводка4_4;D:\C++\Проводка4_6
+Item13=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;..\Проводка4_4\настройка АМД;..\Проводка4_4;D:\C++\Проводка4_6
+Item14=..\provodka4_4\настройка АМД;..\provodka4_4;C:\provowka4_6;C:\;C:\provodka4_5;C:\provodka4_4\provodka4_4\настройка АМД;C:\provodka4_4\provodka4_4;настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\gorisont\provodka4_4
+Item15=..\provodka4_4;C:\provowka4_6;C:\;C:\provodka4_5;C:\provodka4_4\provodka4_4\настройка АМД;C:\provodka4_4\provodka4_4;настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\gorisont\provodka4_4
+Item16=C:\provowka4_6;C:\;C:\provodka4_5;C:\provodka4_4\provodka4_4\настройка АМД;C:\provodka4_4\provodka4_4;настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\gorisont\provodka4_4
+Item17=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\gorisont\provodka4_4
+Item18=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\gorisont\provodka4_4;D:\gorisont\provodka4_4\настройка АМД
+Item19=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\gorisont\provodka4_3;D:\gorisont\provodka4_3\настройка АМД
+Item20=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\gorisont\provodka4_3;D:\gorisont\provodka4_3\настройка АМД
+Item21=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\GORIZONT\provodka4_2;D:\GORIZONT\provodka4_2\настройка АМД
+Item22=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\GORIZONT\provodka4_2;D:\GORIZONT\provodka4_2\настройка АМД
+Item23=..\provodka4_1\настройка АМД;..\provodka4_1;настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\GORIZONT\provodka4_2
+Item24=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\горизонт\provodka4_1
+Item25=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\горизонт\provodka4_1;D:\горизонт\provodka4_1\настройка АМД
+Item26=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\горизонт\provodka4_1;D:\горизонт\provodka4_1\настройка АМД
+Item27=настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\горизонт;D:\горизонт\настройка АМД
+Item28=C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\горизонт;D:\горизонт\настройка АМД
+Item29=тарировка;настройка АМД;C:\Program Files\Borland\CBuilder6\Bin;$(BCB)\lib\obj;$(BCB)\lib;D:\GORISONT\Проводка4_1;D:\GORISONT\Проводка4_1\настройка АМД
+
+[HistoryLists\hlDebugSourcePath]
+Count=2
+Item0=$(BCB)\source\vcl
+Item1=$(BCB)\source\vcl;C:\Program Files\Borland\Delphi7\Lib
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=D:\GORIZONT\рабочая
+
+[HistoryLists\hlFinalOutputDir]
+Count=16
+Item0=D:\C++\Проводка4_67\
+Item1=D:\C++\Проводка4_66\
+Item2=D:\C++\Проводка4_65\
+Item3=D:\C++\Проводка4_64\
+Item4=D:\C++\Проводка4_63\
+Item5=D:\C++\Проводка4_82\
+Item6=D:\C++\Проводка4_81\
+Item7=D:\C++\Проводка4_8\
+Item8=D:\C++\Проводка4_8
+Item9=C:\gorizont\Проводка4_8\
+Item10=C:\gorizont\Проводка4_8
+Item11=C:\gorizont\Проводка4_7\
+Item12=C:\gorizont\Проводка4_7
+Item13=D:\C++\Проводка4_7\
+Item14=D:\C++\Проводка4_6\
+Item15=D:\C++\Проводка4_6
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+  </IDEOPTIONS>
+</PROJECT>

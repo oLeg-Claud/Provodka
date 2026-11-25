@@ -1,0 +1,90 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style>
+    body {
+        margin: 0;
+    }
+</style>
+<link rel="stylesheet" href="rotator_data/font-awesome.css">
+<meta charset="utf-8">
+
+<!-- Yandex.Metrika counter -->
+<script async="" src="tag.js"></script><script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(55336090, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55336090" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="text/javascript" src="rotator_data/jquery-3.js"></script>
+</head><body><div id="player"><iframe allowfullscreen="" mozallowfullscreen="" scrolling="no" webkitallowfullscreen="" allow="autoplay fullscreen" src="rotator_data/promolanding.htm" frameborder="no" height="100%" width="100%"></iframe></div>
+<script>
+    let ads = [
+        { code: '<iframe width="100%" height="100%" src="https://www.smotretonline.ru/video/f/rotator8/yandexVPAID3.html" frameborder="0" allowfullscreen></iframe>', pid: 52},{ code: '<iframe allowfullscreen="" frameborder="no" mozallowfullscreen="" scrolling="no" webkitallowfullscreen="" allow="autoplay fullscreen" width="100%" height="100%" src="https://showjet.ru/promolanding?autoplay=true&sjuid5=46"></iframe>', pid: 45},{ code: '<iframe allowfullscreen="" frameborder="no" mozallowfullscreen="" scrolling="no" webkitallowfullscreen="" allow="autoplay fullscreen" width="100%" height="100%" src="https://showjet.ru/promolanding?autoplay=true&sjuid5=46"></iframe>', pid: 53},{ code: '<iframe allowfullscreen="" frameborder="no" mozallowfullscreen="" scrolling="no" webkitallowfullscreen="" allow="autoplay fullscreen" width="100%" height="100%" src="https://showjet.ru/promolanding?autoplay=true&sjuid5=46"></iframe>', pid: 42},{ code: '<iframe width="100%" height="100%" src="//www.smotretonline.ru/video/f/mv/mv.html" frameborder="0" allowfullscreen></iframe>', pid: 47},    ];
+
+    let i = 0;
+    let container = document.getElementById('player');
+    container.innerHTML = ads[i].code;
+    i++;
+    var st = 0;
+    $(window).on("message", function (e) {
+        if (e.originalEvent.data['data'] !== undefined) {
+            event = e.originalEvent.data['data']['event'];
+        } else {
+            event = e.originalEvent.data;
+        }
+
+        switch (event) {
+            case 'adp_VAST_loaded':
+            case 'sj_adStarted':
+                window.parent.postMessage('adp_ads_loaded', '*');
+                break;
+
+
+            case 'sj_impression':
+            case 'adp_VAST_view':
+                window.parent.postMessage('adp_ads_viewed', '*');
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://adprofits.ru/f/logIndex.php?id=1184&type=view&pid=' + ads[i - 1].pid,
+                    cache: false
+                });
+                console.log('message', 'i++++++++++++++++++++++++++++++');
+                break;
+
+
+            case 'sj_ads_finished':
+            case 'sj_start_content':
+            case 'sj_no_ads':
+            case 'sj_player_error':
+            case 'tvzp_has_movie_start':
+            case 'tvzp_has_movie_pause':
+            case 'sj_adpaused':
+            case 'adp_no_ads':
+            case 'noVastVideoCallback':
+            case 'AdError':
+            case 'tvzp_has_ad_0':
+            case 'no_ads':
+            case 'adp_VASTads_ended':
+            case 'AdVideoComplete':
+            case 'AdStopped':
+            case '_ve_content_start':
+            case 'NoAds':
+                if (i < ads.length) {
+                    window.parent.postMessage('adp_ads_next', '*');
+                    container.innerHTML = ads[i].code;
+                    i++;
+                } else {
+                    console.log('adp_ads_ended');
+                    window.parent.postMessage('adp_ads_ended', '*');
+                }
+                console.log('message', 'n----------------------------');
+                break;
+        }
+    });
+</script><iframe name="ym-native-frame" title="ym-native-frame" style="opacity: 0 ! important; width: 0px ! important; height: 0px ! important; position: absolute ! important; left: 100% ! important; bottom: 100% ! important; border: 0px none ! important;" aria-hidden="true" frameborder="0"></iframe></body></html>

@@ -1,0 +1,78 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 17	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+<HEAD>
+<TITLE>
+WITS - Record 17
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 17 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 17   :  CEMENTING</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  17<TD WIDTH=200><B>Logical Record Type </B>  167
+                   <TD WIDTH=200><B>Auto/Manual</B> AUTOMATIC
+<TR><TD COLSPAN=3><B>Trigger</B>   [TIME] Transmit at a specified time interval (secs)
+<TR><TD COLSPAN=3><B>Data Source</B>   Data acquired in real-time (possibly via Level 0 transfer).  Averages are computed over the triggering interval and reset when the record is transmitted.  Record only transmitted during a cementing operation
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(3).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2	<TD><A HREF = "../index(3).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3	<TD><A HREF = "../index(3).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4	<TD><A HREF = "../index(3).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5	<TD><A HREF = "../index(3).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6	<TD><A HREF = "../index(3).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7	<TD><A HREF = "../index(3).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8	<TD><A HREF = "../index(3).htm#appb17.8">Depth Hole (meas)	<TD>DEPTMEAS	<TD>DMEA	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>9	<TD><A HREF = "../index(3).htm#appb17.9">Depth Hole (vert)	<TD>DEPTVERT	<TD>DVER	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>10	<TD><A HREF = "../index(3).htm#appb17.10">Depth Casing Shoe (meas)	<TD>DEPTCSGM	<TD>DCGM	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>11	<TD><A HREF = "../index(3).htm#appb17.11">Depth Casing Shoe (vert)	<TD>DEPTCSGV	<TD>DCGV	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>12	<TD><A HREF = "../index(3).htm#appb17.12">Cem Pump Pressure (avg)	<TD>CEMPPA	<TD>CPPA	<TD>F 	<TD>4	<TD>KPA	<TD>PSI
+<TR><TD>13	<TD><A HREF = "../index(3).htm#appb17.13">Hookload (avg)	<TD>HKLA	<TD>HKLA	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>14	<TD><A HREF = "../index(3).htm#appb17.14">Block Position	<TD>BLKPOS	<TD>BPOS	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>15	<TD><A HREF = "../index(3).htm#appb17.15">Cem Flow Rate In  (calc)	<TD>CEMFIC	<TD>CFIC	<TD>F 	<TD>4	<TD>M3/M	<TD>BPM
+<TR><TD>16	<TD><A HREF = "../index(3).htm#appb17.16">Cem Flow Rate In  (avg)	<TD>CEMFIA	<TD>CFIA	<TD>F 	<TD>4	<TD>M3/M	<TD>BPM
+<TR><TD>17	<TD><A HREF = "../index(3).htm#appb17.17">Cem Flow Rate Out (avg)	<TD>CEMFOA	<TD>CFOA	<TD>F 	<TD>4	<TD>M3/M	<TD>BPM
+<TR><TD>18	<TD><A HREF = "../index(3).htm#appb17.18">Cem Flow Out %	<TD>CEMFOP	<TD>CFOP	<TD>S 	<TD>2	<TD>%	<TD>%
+<TR><TD>19	<TD><A HREF = "../index(3).htm#appb17.19">Cem Fluid Dens In  (avg)	<TD>CEMDIA	<TD>CDIA<TD>	F 	<TD>4	<TD>KGM3	<TD>PPG
+<TR><TD>20	<TD><A HREF = "../index(3).htm#appb17.20">Cem Fluid Dens Out (avg)	<TD>CEMDOA	<TD>CDOA	<TD>F 	<TD>4	<TD>KGM3	<TD>PPG
+<TR><TD>21	<TD><A HREF = "index(1).htm#appb17.21">ECD at Casing Shoe	<TD>ECDCSG	<TD>ECDC	<TD>F 	<TD>4	<TD>KGM3	<TD>PPG
+<TR><TD>22	<TD><A HREF = "index(1).htm#appb17.22">Cem Fluid Temp In  (avg)	<TD>CEMTIA	<TD>CTIA	<TD>F 	<TD>4	<TD>DEGC	<TD>DEGF
+<TR><TD>23	<TD><A HREF = "index(1).htm#appb17.23">Cem Fluid Temp Out (avg)	<TD>CEMTOA	<TD>CTOA	<TD>F 	<TD>4	<TD>DEGC	<TD>DEGF
+<TR><TD>24	<TD><A HREF = "index(1).htm#appb17.24">Cem Stage Number	<TD>CEMSTAGE	<TD>CSTG	<TD>S 	<TD>2	<TD>----	<TD>----
+<TR><TD>25	<TD><A HREF = "index(1).htm#appb17.25">Cem Depth to DV Tool	<TD>DEPTDVT	<TD>DDVT	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>26	<TD><A HREF = "index(1).htm#appb17.26">Cem Fluid Type/Batch	<TD>CEMFTYPE	<TD>CTYP	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>27	<TD><A HREF = "index(1).htm#appb17.27">Cem Cumulative Returns	<TD>CEMCUMRT	<TD>CCRT	<TD>F 	<TD>4	<TD>M3	<TD>BBL
+<TR><TD>28	<TD><A HREF = "index(1).htm#appb17.28">Cem Indiv Vol Pumped	<TD>CEMIVOL	<TD>CIVL	<TD>F 	<TD>4	<TD>M3	<TD>BBL
+<TR><TD>29	<TD><A HREF = "index(1).htm#appb17.29">Cem Cement Vol Pumped	<TD>CEMCVOL	<TD>CCVL	<TD>F 	<TD>4	<TD>M3	<TD>BBL
+<TR><TD>30	<TD><A HREF = "index(1).htm#appb17.30">Cem Total Vol Pumped	<TD>CEMTVOL	<TD>CTVL	<TD>F 	<TD>4	<TD>M3	<TD>BBL
+<TR><TD>31	<TD><A HREF = "index(1).htm#appb17.31">Cem Volume to Bump Plug	<TD>CEMBPVOL	<TD>CBVL	<TD>F 	<TD>4	<TD>M3	<TD>BBL
+<TR><TD>32	<TD><A HREF = "index(1).htm#appb17.32">Cem No./Status of Plug(s)	<TD>CEMPLUGS	<TD>CPLG	<TD>A 	<TD>8	<TD>----	<TD>----
+<TR><TD>33	<TD><A HREF = "index(1).htm#appb17.33">Cem Job Type	<TD>CEMJTYP	<TD>CJTY	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>34<TD><A HREF = "index(1).htm#appb17.34">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>35<TD><A HREF = "index(1).htm#appb17.34">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>36<TD><A HREF = "index(1).htm#appb17.34">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>37<TD><A HREF = "index(1).htm#appb17.34">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>38<TD><A HREF = "index(1).htm#appb17.34">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,453 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Index (starting) page	29Aug98 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+
+<HEAD>
+
+<TITLE>
+Wellsite Information Transfer Specification
+</TITLE>
+
+<META NAME="keywords" CONTENT="WITS/Wellsite/Information/Transfer/Communications/">
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification overview with background, format description, etc.">
+
+</HEAD>
+
+<BODY>
+
+<A NAME = "top"></A>
+
+<TABLE>
+<TR>
+<TD width=200 align=center valign=middle ROWSPAN=2>
+<IMG ALT="rig" SRC = "rig.gif" WIDTH=200 HEIGHT=150>
+</TD>
+<TD width=600 align=left valign=bottom>
+<H2>W.I.T.S.</H2>
+</TD>
+</TR>
+<TR>
+<TD align=left valign=middle>
+<H3>Wellsite Information Transfer Specification</H3>
+</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<A NAME = "intro"></A>
+<B>Introduction</B><P>
+
+The <I>WELLSITE INFORMATION TRANSFER SPECIFICATION (WITS) </I>is a communications
+format used for the transfer of a wide variety of wellsite data from one computer
+system to another.  It is a recommended format by which Operating and Service
+companies involved in the Exploration and Production areas of the Petroleum Industry
+may exchange data in either an online or batch transfer mode. <P>
+
+WITS is a <A HREF = "#levels"> multi-level format </A> which offers an easily
+achieved entry point with increasingly flexible higher levels.  At the lower levels,
+a fixed format ASCII data stream is employed, while, at the highest level, a
+self-defining customizable data stream is available. <P>
+
+A WITS data stream consists of discrete data records.  Each data record type is
+generated independently of other data record types and each has a unique trigger
+variable and sampling interval.  The rig activity usually determines which records
+are applicable at any given time such that only appropriate data is transmitted.  <P>
+
+WITS also incorporates the means for a remote computer system to send instructions to
+the sending system in order to set or change certain parameters, including the type
+of data transmitted and the interval for transmission. <P>
+
+As well as specifying a format for data transmission, WITS also defines a basic set
+of <A HREF = "#recs"> pre-defined records </A>  to which user-defined record types
+may be added.
+<P>
+
+WITS has been used extensively for a number of years by working for many <A HREF =
+"#operators"> operators </A> around the <A HREF = "#world"> world </A> to facilitate 
+information-sharing and to provide data to remote monitoring facilities.<P>
+
+<HR SIZE=5> <P>
+<A NAME="background"></A>
+<B>Background</B><P>
+
+Over the years many Operating and Service companies developed proprietary formats for
+electronic data exchange.  When a new working relationship was established between a
+Service company and an Operator, new software often had to be written, followed by
+extensive testing and debugging before the data collection and analysis systems of
+the two entities could communicate with one another correctly.  This often led to
+problem start-ups with the resulting loss of time and data.  The ongoing development
+and maintenance of these formats represented a significant expenditure.<P>
+
+The cost and complexity of format matching and modification often led to a reluctance
+on the part of some Operators to get involved in this type of service, and a great
+deal of rig data, which might have been  extremely useful in rig performance
+evaluation, drilling monitoring and control, and formation evaluation while drilling,
+was often not collected or was not readily available to decision makers. <P>
+
+In an attempt to resolve this information transfer problem, the Wellsite Information
+Transfer Specification was established .<P>
+
+A number of  Operating and Service company representatives with wide experience in
+the areas of computer software system development, geology and drilling engineering
+formed the first workgroup to look into the needs of the industry in this area.  All
+were familiar with the problems associated with the profusion and mismatch of rig
+data formats.<P>
+
+To ensure that any format proposed was both complete and acceptable to the industry
+as a whole, a vigorous effort was made to involve representatives from as many
+Operating and Service companies as possible.   This effort included correspondence
+with companies operating in Europe and Asia as well as the United States.<P>
+
+The goal of the work group was broad but concrete:<P>
+
+<PRE>
+	"To define the format and information content of the 
+	data stream transmitted from a wellsite to a central 
+	site by telecommunications facilities or hard media".
+</PRE>
+<P>
+To minimize omissions in the format, a major effort was made to obtain an inventory
+of data items monitored or collected at the wellsite in the following areas:<P>
+
+<UL>
+<LI>Geology
+<LI>Drilling Engineering
+<LI>Measurement While Drilling (MWD)
+<LI>Rig Parameters
+<LI>Cementing
+<LI>Drill Stem Testing
+</UL>
+
+Companies providing data collection services in these areas were polled for data
+items and formats currently in use.  Concurrent with the effort, the group's members
+familiarized themselves with the major existing formats and data transmission systems
+in use in the industry. 
+
+With a comprehensive data dictionary established and with representatives on the
+subcommittee familiar with existing formats, careful consideration led to a set of
+requirements which, it was hoped, would satisfy the present and future needs of both
+Operating and Service companies.
+
+Among these requirements were:
+
+<UL>
+<LI> achievable by both small and large companies
+<LI> adaptable to the needs of the industry over the course of time as technology
+changes
+<LI> offer a simple, low cost entry point
+<LI> limit long term software support costs
+<LI> employ an efficient mode of transmission
+<LI> be capable of use in both online and in batch modes
+<LI> be capable of implementation on a wide range of computer platforms
+<LI> meet the needs of both the single remote user and the multi-rig data center
+<LI> encompass existing standards (official or "de facto") where possible
+<LI> address international as well as domestic needs
+
+</UL>
+
+With these requirements in mind, the subcommittee adopted the <EM>Log Information
+Standard (LIS) </EM>as the basic framework for WITS and set about formulating the
+specific components of the format.  LIS was chosen since it met many of the
+requirements set out for WITS and was a well established and familiar method of data
+exchange (a "de facto" standard in the wireline industry). <P>
+
+The WITS Steering Group is also a member of the <EM>API Petroleum Information Data
+Exchange (PIDX). </EM>  The API-PIDX WITS User Group exists to promote the format,
+respond to questions of interpretation, and to investigate ways of enhancing the
+format to meet new requirements in the future.<P>
+
+
+<HR SIZE=5> <P>
+<A NAME = "levels"></A>
+<B>WITS Transmission Levels</B><P>
+<P>
+
+The following summarizes the various levels of WITS:<P>
+<P>
+
+<DL>
+<DT><B>Level 0</B>
+<DD>Also known as <EM>"Intra Rig Transfer Specification"</EM>, this involves a very
+basic ASCII transfer format intended primarily for sharing of information between
+service companies, though lending itself well as a simple entry point into wellsite
+data transfer.  Data items are identified by a numeric string tying the value to a
+particular location within a Pre-Defined Record, or to an agreed upon addition to the
+Data Dictionary.<P>
+
+<HR SIZE=5> <P>
+
+<DT><B>Level 1</B>
+<DD>In Level 1 and above, the data stream takes on a binary (LIS) format.  Values are
+expressed in LIS-defined representations (e.g. floating point, integer, string, etc) 
+The data items are packaged into a WITS Data Record and then sandwiched between LIS
+Physical and Logical Record Headers and Trailers, to make up a LIS Data Record.<P>
+Twenty five Pre-Defined Records have been identified, covering, among other areas,
+drilling, geology, directional work, MWD, cementing and testing.  At Level 1, these
+data records, generated at varying times and under varying rig conditions, are
+constructed and placed in the data communications channel.<P>
+
+No LIS record types besides Data Records are used at this level.  Each of the 25
+Pre-Defined Records has a fixed size in bytes.  However, each contains designated
+'spare' channels for limited customization.  The Pre-Defined Records are:<P>
+
+<A NAME = "recs"></A>
+
+<CENTER>
+<B>WITS Pre-Defined Record Types</B><P>
+<TABLE BORDER=5>
+<TH ALIGN=CENTER>Rec<TH ALIGN CENTER>Name<TH ALIGN CENTER>Description
+<TR>
+<TD>1
+<TD><A HREF = "rec1.htm">General Time-Based</A>
+<TD>Drilling data gathered at regular time intervals
+<TR>
+<TD>2
+<TD><A HREF = "rec2.htm">Drilling - Depth Based</A>
+<TD>Drilling data gathered at regular depth intervals
+<TR>
+<TD>3
+<TD><A HREF = "rec3.htm">Drilling - Connections</A>
+<TD>Data gathered at drilling connections
+<TR>
+<TD>4
+<TD><A HREF = "rec4.htm">Hydraulics</A>
+<TD>Hydraulics data gathered while circulating
+<TR>
+<TD>5
+<TD><A HREF = "rec5.htm">Trip - Time</A>
+<TD>Tripping data gathered while running in/pulling out
+<TR>
+<TD>6
+<TD><A HREF = "rec6.htm">Trip - Connections</A>
+<TD>Tripping data gathered at tripping connections
+<TR>
+<TD>7
+<TD><A HREF = "rec7.htm">Survey/Directional</A>
+<TD>Directional/Survey data
+<TR>
+<TD>8
+<TD><A HREF = "rec8.htm">MWD Formation Evaluation</A>
+<TD>MWD Formation Evaluation data
+<TR>
+<TD>9
+<TD><A HREF = "rec9.htm">MWD Mechanical</A>
+<TD>MWD Mechanical data
+<TR>
+<TD>10
+<TD><A HREF = "rec10.htm">Pressure Evaluation</A>
+<TD>Pressure Evaluation data
+<TR>
+<TD>11
+<TD><A HREF = "rec11.htm">Mud Tank Volumes</A>
+<TD>Mud Tank (Pit) Volume data
+<TR>
+<TD>12
+<TD><A HREF = "rec12.htm">Chromatograph Cycle-Based</A>
+<TD>Chromatograph Cycle data
+<TR>
+<TD>13
+<TD><A HREF = "rec13.htm">Chromatograph Depth-Based</A>
+<TD>Chromatograph data averaged over depth intervals
+<TR>
+<TD>14
+<TD><A HREF = "rec14.htm">Lagged Mud Properties</A>
+<TD>Mud Property data based returns depth increments
+<TR>
+<TD>15
+<TD><A HREF = "rec15.htm">Cuttings / Lithology</A>
+<TD>Cuttings Lithology and related data
+<TR>
+<TD>16
+<TD><A HREF = "rec16.htm">Hydrocarbon Show</A>
+<TD>Hydrocarbon Show related data
+<TR>
+<TD>17
+<TD><A HREF = "rec17.htm">Cementing</A>
+<TD>Well Cementing operations data
+<TR>
+<TD>18
+<TD><A HREF = "rec18.htm">Drill Stem Testing</A>
+<TD>Well Testing operations data
+<TR>
+<TD>19
+<TD><A HREF = "rec19.htm">Configuration</A>
+<TD>Drillstring and Rig Configuration data
+<TR>
+<TD>20
+<TD><A HREF = "rec20.htm">Mud Report</A>
+<TD>Mud Report data
+<TR>
+<TD>21
+<TD><A HREF = "rec21.htm">Bit Report</A>
+<TD>Bit Report data
+<TR>
+<TD>22
+<TD><A HREF = "rec22.htm">Comments</A>
+<TD>Freeform Comments
+<TR>
+<TD>23
+<TD><A HREF = "rec23.htm">Well Identification</A>
+<TD>Well Identification data
+<TR>
+<TD>24
+<TD><A HREF = "rec24.htm">Vessel Motion / Mooring Status</A>
+<TD>Vessel Motion and Mooring Status data
+<TR>
+<TD>25
+<TD><A HREF = "rec25.htm">Weather / Sea State</A>
+<TD>Weather and Sea State data
+</TABLE>
+</CENTER>
+<P>
+
+<HR SIZE=5> <P>
+
+<DT><B>Level 2</B>
+<DD>WITS Level 2 builds on Level 1 through addition of WITS bidirectional dialogue
+through the use of LIS Comment records.  This dialogue is used in synchronization at
+start up and after a communications line interruption, as well as permitting two-way
+messaging between the sender and receiver.  Such messages might include requests for
+change in transmission intervals for certain records, for example.<P>
+
+<HR SIZE=5> <P>
+
+<DT><B>Level 2b</B>
+<DD>WITS Level 2b adds the option to buffer data that has been transmitted, making it
+available for re-transmission in the event of non-receipt of data by the receiver.<P>
+
+<HR SIZE=5> <P>
+
+<DT><B>Level 4</B>
+<DD>WITS Level 4 employs a completely different format than the previous levels since
+it is based on the emerging data transfer standard of API RP66.  The concepts of
+Pre-Defined Records and Bi-Directional Dialogue remain, but using RP66 as the
+formatting mechanism.<P>
+</DL>
+<P>
+
+<HR SIZE-5><P>
+<B>Industry Participation</B><P>
+Participants in the steering group include:
+<P>
+<UL>
+<LI>Baker Hughes INTEQ<BR>
+<LI>Schlumberger Anadrill<BR>
+<LI>Halliburton<BR>
+<LI>Sperry Sun<BR>
+<LI>MD/Totco<BR>
+</UL>
+<P>
+<P>
+
+<HR SIZE-5><P>
+<A NAME = "operators"></A>
+<B>Experience</B><P>
+Operating companies for wells on which WITS services have been provided<P>
+
+<CENTER>
+<TABLE BORDER=5>
+
+<TD>Amoco
+<TD>McMoran
+<TD>Occidental
+<TD>Arco
+<TD>ELF
+<TD>Shell
+<TD>Norsk Hydro
+<TD>Gupco
+<TR>
+<TD>BHP
+<TD>Chevron PNG
+<TD>Phillips
+<TD>Conoco
+<TD>Statoil
+<TD>Soekor
+<TD>DuPont
+<TD>Maersk
+<TR>
+<TD>Maraven
+<TD>Amerada Hess
+<TD>Corpoven
+<TD>Saga
+<TD>Mobil
+<TD>JNOC
+<TD>Exxon/Esso
+<TD>BP
+<TR>
+<TD>Kuffprc
+<TD>Woodside
+</TABLE>
+</CENTER>
+<P>
+
+<A NAME = "service"></A>
+Service companies with experience providing WITS services<P>
+
+<CENTER>
+<TABLE BORDER=5>
+
+<TR>
+<TD>Baker Hughes INTEQ
+<TD>Anadrill
+<TD>Sperry Sun
+<TD>Martin Decker TOTCO
+<TR>
+<TD>Halliburton
+<TD>Dowell Schlumberger
+<TD>Otis
+<TD>Datalog
+</TABLE>
+</CENTER>
+<P>
+
+<A NAME = "world"></A>
+
+Countries/areas where WITS services have been provided<P>
+
+<P>
+<CENTER>
+<IMAGE SRC="world.gif">
+</CENTER>
+
+<P>
+
+<CENTER>
+<TABLE BORDER=5>
+
+<TR>
+<TD>United Kingdom
+<TD>Norway
+<TD>Denmark
+<TD>Holland
+<TD>Canada
+<TD>Trinidad
+<TR>
+<TD>India
+<TD>Myanmar
+<TD>Tunisia
+<TD>United States
+<TD>Congo
+<TD>Malaysia
+<TR>
+<TD>Australia
+<TD>Papua New Guinea
+<TD>Indonesia
+<TD>Venezuela
+<TD>South Africa
+<TD>Egypt
+<TR>
+<TD>Nigeria
+<TD>Japan
+<TD>Namibia
+</TABLE>
+</CENTER>
+
+<P>
+
+</BODY>
+
+</HTML>

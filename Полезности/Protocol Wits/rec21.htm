@@ -1,0 +1,89 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 21	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+<HEAD>
+<TITLE>
+WITS - Record 21
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 21 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 21   :  BIT REPORT</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  21 <TD WIDTH=200><B>Logical Record Type </B>  171
+                   <TD WIDTH=200><B>Auto/Manual</B> MANUAL 
+<TR><TD COLSPAN=3><B>Trigger</B>   [EVENT]    Transmission is operator-initiated 
+<TR><TD COLSPAN=3><B>Data Source</B> Manually-entered data at the start and end of each bit run.  Record is sent when new data values are available 
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(2).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(2).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2	<TD><A HREF = "../index(2).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3	<TD><A HREF = "../index(2).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4	<TD><A HREF = "../index(2).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5	<TD><A HREF = "../index(2).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6	<TD><A HREF = "../index(2).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7	<TD><A HREF = "../index(2).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8	<TD><A HREF = "../index(2).htm#appb21.8">Bit Number	<TD>BTNUM	<TD>BNUM	<TD>A <TD>	8	<TD>----<TD>	----
+<TR><TD>9	<TD><A HREF = "../index(2).htm#appb21.9">Bit Diameter	<TD>BTDIAM	<TD>BDIA	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>10	<TD><A HREF = "../index(2).htm#appb21.10">Bit Manufacturer	<TD>BTMANUF	<TD>BMAN	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>11	<TD><A HREF = "../index(2).htm#appb21.11">Bit Name	<TD>BTNAME	<TD>BNAM	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>12	<TD><A HREF = "../index(2).htm#appb21.12">Bit IADC Code	<TD>BTCODE	<TD>BCOD	<TD>A 	<TD>8	<TD>----	<TD>----
+<TR><TD>13	<TD><A HREF = "../index(2).htm#appb21.13">Bit Serial Number	<TD>BTSERNUM	<TD>BSER	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>14	<TD><A HREF = "../index(2).htm#appb21.14">Bit Cost	<TD>BTCOST	<TD>BCST	<TD>F 	<TD>4	<TD>$	<TD>$
+<TR><TD>15	<TD><A HREF = "../index(2).htm#appb21.15">Bit Jet 1 Diameter	<TD>BTJET1	<TD>BJT1	<TD>F 	<TD>4	<TD>MM	<TD>I/32
+<TR><TD>16	<TD><A HREF = "../index(2).htm#appb21.16">Bit Jet 2 Diameter	<TD>BTJET2	<TD>BJT2	<TD>F 	<TD>4	<TD>MM	<TD>I/32
+<TR><TD>17	<TD><A HREF = "../index(2).htm#appb21.17">Bit Jet 3 Diameter	<TD>BTJET3	<TD>BJT3	<TD>F 	<TD>4	<TD>MM	<TD>I/32
+<TR><TD>18	<TD><A HREF = "../index(2).htm#appb21.18">Bit Jet 4 Diameter	<TD>BTJET4	<TD>BJT4	<TD>F 	<TD>4	<TD>MM	<TD>I/32
+<TR><TD>19	<TD><A HREF = "../index(2).htm#appb21.19">Bit Center Jet Diameter	<TD>BTJETCEN	<TD>BJTC	<TD>F 	<TD>4	<TD>MM	<TD>I/32
+<TR><TD>20	<TD><A HREF = "../index(2).htm#appb21.20">Bit Total Flow Area	<TD>BTTFA	<TD>BTFA	<TD>F 	<TD>4	<TD>MM2	<TD>SQIN
+<TR><TD>21	<TD><A HREF = "../index(2).htm#appb21.21">Bit Starting Depth (In)	<TD>BTDEPIN	<TD>BDPI <TD>	F 	<TD>4	<TD>M	<TD>F
+<TR><TD>22	<TD><A HREF = "../index(2).htm#appb21.22">Bit Ending Depth   (Out)	<TD>BTDEPOUT	<TD>BDPO	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>23	<TD><A HREF = "../index(2).htm#appb21.23">Bit Run Drilled Distance	<TD>BTDDIST	<TD>BDDI	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>24	<TD><A HREF = "../index(2).htm#appb21.24">Bit Run Drilled Time	<TD>BTDTIME	<TD>BDTI	<TD>F 	<TD>4	<TD>HR	<TD>HR
+<TR><TD>25	<TD><A HREF = "../index(2).htm#appb21.25">Bit Run Reamed Time	<TD>BTRTIME	<TD>BRTI	<TD>F 	<TD>4	<TD>HR	<TD>HR
+<TR><TD>26	<TD><A HREF = "../index(2).htm#appb21.26">Bit Penetration Rate (avg)	<TD>BTROPA	<TD>BRPA	<TD>F 	<TD>4	<TD>M/HR	<TD>F/HR
+<TR><TD>27	<TD><A HREF = "../index(2).htm#appb21.27">Bit Weight-on-Bit (avg)	<TD>BTWOBA	<TD>BWBA	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>28	<TD><A HREF = "../index(2).htm#appb21.28">Bit Weight-on-Bit (max)	<TD>BTWOBX	<TD>BWBX	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>29	<TD><A HREF = "../index(2).htm#appb21.29">Bit Rotary Speed  (avg)	<TD>BTRPMA	<TD>BRMA	<TD>S 	<TD>2	<TD>RPM	<TD>RPM
+<TR><TD>30	<TD><A HREF = "../index(2).htm#appb21.30">Bit Rotary Speed  (max)	<TD>BTRPMX	<TD>BRMX	<TD>S 	<TD>2	<TD>RPM	<TD>RPM
+<TR><TD>31	<TD><A HREF = "../index(2).htm#appb21.31">Bit Mud Flow Rate (avg)	<TD>BTMFA	<TD>BMFA	<TD>F 	<TD>4	<TD>L/M	<TD>GPM
+<TR><TD>32	<TD><A HREF = "../index(2).htm#appb21.32">Bit Mud Density   (avg)	<TD>BTMDA	<TD>BMDA	<TD>F 	<TD>4	<TD>KGM3	<TD>PPG
+<TR><TD>33	<TD><A HREF = "../index(2).htm#appb21.33">Bit Standpipe Pressure (avg)	<TD>BTSPPA	<TD>BSPA	<TD>F 	<TD>4	<TD>KPA	<TD>PSI
+<TR><TD>34	<TD><A HREF = "../index(2).htm#appb21.34">Bit Reason Run	<TD>BTRUN	<TD>BRUN	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>35	<TD><A HREF = "../index(2).htm#appb21.35">Bit Reason Pulled	<TD>BTPULL	<TD>BPUL	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>36	<TD><A HREF = "../index(2).htm#appb21.36">Bit Grade In	<TD>BTGRDIN	<TD>BGI	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>37	<TD><A HREF = "../index(2).htm#appb21.37">Bit Grade Out	<TD>BTGRDOUT	<TD>BGO	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>38	<TD><A HREF = "../index(2).htm#appb21.38">Bit Shock Sub Used ?	<TD>BTSHKSUB	<TD>BSHK	<TD>A 	<TD>1	<TD>----	<TD>----
+<TR><TD>39	<TD><A HREF = "../index(2).htm#appb21.39">Bit Mud Motor Used ?	<TD>BTMUDMOT	<TD>BMM	<TD>A 	<TD>1	<TD>----	<TD>----
+<TR><TD>40	<TD><A HREF = "../index(2).htm#appb21.40">Bit Comments	<TD>BTCOMM	<TD>BCOM	<TD>A 	<TD>128	<TD>----	<TD>----
+<TR><TD>41<TD><A HREF = "../index(2).htm#appb21.41">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>42<TD><A HREF = "../index(2).htm#appb21.41">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>43<TD><A HREF = "../index(2).htm#appb21.41">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>44<TD><A HREF = "../index(2).htm#appb21.41">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>45<TD><A HREF = "../index(2).htm#appb21.41">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+<TR><TD>46<TD><A HREF = "../index(2).htm#appb21.41">< SPARE 6 ><TD>SPARE6<TD>SPR6<TD>F<TD>4<TD>----<TD>----
+<TR><TD>47<TD><A HREF = "../index(2).htm#appb21.41">< SPARE 7 ><TD>SPARE7<TD>SPR7<TD>F<TD>4<TD>----<TD>----
+<TR><TD>48<TD><A HREF = "../index(2).htm#appb21.41">< SPARE 8 ><TD>SPARE8<TD>SPR8<TD>F<TD>4<TD>----<TD>----
+<TR><TD>49<TD><A HREF = "../index(2).htm#appb21.41">< SPARE 9 ><TD>SPARE9<TD>SPR9<TD>F<TD>4<TD>---<TD>----
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,76 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 2	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+<HEAD>
+<TITLE>
+WITS - Record 2
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 2 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 2   :  DRILLING DEPTH-BASED</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>      2 <TD WIDTH=200><B>Logical Record Type </B>  152
+                   <TD WIDTH=200><B>Auto/Manual</B> AUTOMATIC
+<TR><TD COLSPAN=3><B>Trigger</B>   [DEPTH] Transmit at a specified depth interval (feet or meters)
+<TR><TD COLSPAN=3><B>Data Source</B> Data acquired in real-time when on-bottom drilling NEW hole and computed over the trigger interval 
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "index(1).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "index(1).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "index(1).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "index(1).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2<TD><A HREF = "index(1).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3<TD><A HREF = "index(1).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4<TD><A HREF = "index(1).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5<TD><A HREF = "index(1).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6<TD><A HREF = "index(1).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7<TD><A HREF = "index(1).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8<TD><A HREF = "index(1).htm#appb2.8">Depth Hole (meas)<TD>DEPTMEAS<TD>DMEA<TD>F<TD>4<TD>M<TD>F
+<TR><TD>9<TD><A HREF = "index(1).htm#appb2.9">Depth Hole (vert)<TD>DEPTVERT<TD>DVER<TD>F<TD>4<TD>M<TD>F
+<TR><TD>10<TD><A HREF = "index(1).htm#appb2.10">Rate of Penetration (avg)<TD>ROPA<TD>ROPA<TD>F<TD>4<TD>M/HR<TD>F/HR
+<TR><TD>11<TD><A HREF = "index(1).htm#appb2.11">Weight-on-Bit (surf,avg)<TD>WOBA<TD>WOBA<TD>F<TD>4<TD>KDN<TD>KLB
+<TR><TD>12<TD><A HREF = "index(1).htm#appb2.12">Hookload (avg)	<TD>HKLA<TD>HKLA<TD>F<TD>4<TD>KDN<TD>KLB
+<TR><TD>13<TD><A HREF = "index(1).htm#appb2.13">Standpipe Pressure (avg)<TD>SPPA<TD>SPPA<TD>F<TD>4<TD>KPA<TD>PSI
+<TR><TD>14<TD><A HREF = "index(1).htm#appb2.14">Rotary Torque (surf,avg)<TD>TORQA<TD>TQA<TD>F<TD>4<TD>KNM<TD>KFLB
+<TR><TD>15<TD><A HREF = "index(1).htm#appb2.15">Rotary Speed  (surf,avg)<TD>RPMA<TD>RPMA<TD>S<TD>2<TD>RPM<TD>RPM
+<TR><TD>16<TD><A HREF = "index(1).htm#appb2.16">Bit Revolutions (cum)<TD>BTREVC<TD>BRVC<TD>L<TD>4<TD>----<TD>----
+<TR><TD>17<TD><A HREF = "index(1).htm#appb2.17">Mud Density In (avg)<TD>MDIA<TD>MDIA<TD>F<TD>4<TD>KGM3<TD>PPG
+<TR><TD>18<TD><A HREF = "index(1).htm#appb2.18">ECD at Total Depth<TD>ECDTD<TD>ECDT<TD>F<TD>4<TD>KGM3<TD>PPG
+<TR><TD>19<TD><A HREF = "index(1).htm#appb2.19">Mud Flow In (avg)<TD>MFIA<TD>MFIA<TD>F<TD>4<TD>L/M<TD>GPM
+<TR><TD>20<TD><A HREF = "index(1).htm#appb2.20">Mud Flow Out (avg)<TD>MFOA<TD>MFOA<TD>F<TD>4<TD>L/M<TD>GPM
+<TR><TD>21<TD><A HREF = "index(1).htm#appb2.21">Mud Flow Out %<TD>MFOP<TD>MFOP<TD>S<TD>2<TD>%<TD>%
+<TR><TD>22<TD><A HREF = "index(1).htm#appb2.22">Tank Volume (active)<TD>TVOLACT	<TD>TVA	<TD>F<TD>4<TD>M3<TD>BBL
+<TR><TD>23<TD><A HREF = "index(1).htm#appb2.23">Cost/Distance (inst)<TD>CPDI<TD>CPDI<TD>F<TD><TD>$/M<TD>$/F
+<TR><TD>24<TD><A HREF = "index(1).htm#appb2.24">Cost/Distance (cum)<TD>CPDC<TD>CPDC<TD>F<TD>4<TD>$/M<TD>$/F
+<TR><TD>25<TD><A HREF = "index(1).htm#appb2.25">Bit Drilled Time<TD>BTDTIME<TD>BDTI<TD>F<TD>4<TD>HR<TD>HR
+<TR><TD>26<TD><A HREF = "index(1).htm#appb2.26">Bit Drilled Distance<TD>BTDDIST<TD>BDDI<TD>F<TD>4<TD>M<TD>F
+<TR><TD>27<TD><A HREF = "index(1).htm#appb2.27">Corr. Drilling Exponent<TD>DXC<TD>DXC<TD>F<TD>4<TD>----<TD>----
+<TR><TD>28<TD><A HREF = "index(1).htm#appb2.28">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>29<TD><A HREF = "index(1).htm#appb2.28">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>30<TD><A HREF = "index(1).htm#appb2.28">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>31<TD><A HREF = "index(1).htm#appb2.28">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>32<TD><A HREF = "index(1).htm#appb2.28">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>----<TD>----
+<TR><TD>33<TD><A HREF = "index(1).htm#appb2.28">< SPARE 6 ><TD>SPARE6<TD>SPR6<TD>F<TD>4<TD>----<TD>----
+<TR><TD>34<TD><A HREF = "index(1).htm#appb2.28">< SPARE 7 ><TD>SPARE7<TD>SPR7<TD>F<TD>4<TD>----<TD>----
+<TR><TD>35<TD><A HREF = "index(1).htm#appb2.28">< SPARE 8 ><TD>SPARE8<TD>SPR8<TD>F<TD>4<TD>----<TD>----
+<TR><TD>36<TD><A HREF = "index(1).htm#appb2.28">< SPARE 9 ><TD>SPARE9<TD>SPR9<TD>F<TD>4<TD>----<TD>----
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>

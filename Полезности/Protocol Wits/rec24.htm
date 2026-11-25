@@ -1,0 +1,105 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 24	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+
+<HEAD>
+<TITLE>
+WITS - Record 24
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 24 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 24:  VESSEL MOTION / MOORING STATUS</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  24 <TD WIDTH=200><B>Logical Record Type </B>  174
+                   <TD WIDTH=200><B>Auto/Manual</B> AUTO/MANUAL 
+<TR><TD COLSPAN=3><B>Trigger</B>   [TIME] Transmit at a specified time interval (secs)
+<TR><TD COLSPAN=3><B>Data Source</B> Acquired sensor data (possibly via WITS Level 0 transfer), or manually-entered data.  The record is transmitted and any automatic computations are reset at the end of the triggering interval
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(3).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2	<TD><A HREF = "../index(3).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3	<TD><A HREF = "../index(3).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4	<TD><A HREF = "../index(3).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5	<TD><A HREF = "../index(3).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6	<TD><A HREF = "../index(3).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7	<TD><A HREF = "../index(3).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8	<TD><A HREF = "../index(2).htm#appb24.8">Water Depth (mean)	<TD>WATDEPT	<TD>WDPM	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>9	<TD><A HREF = "../index(2).htm#appb24.9">Tide	<TD>TIDE	<TD>TIDE	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>10	<TD><A HREF = "../index(2).htm#appb24.10">Vessel Heading	<TD>VESSHEAD	<TD>VHED	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>11	<TD><A HREF = "../index(2).htm#appb24.11">Rig VCG	<TD>RIGVCG	<TD>RVCG	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>12	<TD><A HREF = "../index(2).htm#appb24.12">Riser Tension	<TD>RISTENS	<TD>RTEN	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>13	<TD><A HREF = "../index(2).htm#appb24.13">Rig Offset (avg)	<TD>OFFSETA	<TD>OFSA	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>14	<TD><A HREF = "../index(2).htm#appb24.14">Rig Offset (max)	<TD>OFFSETX	<TD>OFSX	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>15	<TD><A HREF = "../index(2).htm#appb24.15">Rig Offset Direction	<TD>OFFSETD	<TD>OFSD	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>16	<TD><A HREF = "../index(2).htm#appb24.16">LMRP Angle (avg)	<TD>LMRPANA	<TD>LANA	<TD>F 	<TD>4	<TD>DEG	<TD>DEG	
+<TR><TD>17	<TD><A HREF = "../index(2).htm#appb24.17">LMRP Angle (max)	<TD>LMRPANX	<TD>LANX	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>18	<TD><A HREF = "../index(2).htm#appb24.18">LMRP Angle, Direction	<TD>LMRPAND	<TD>LAND	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>19	<TD><A HREF = "../index(2).htm#appb24.19">Fluid Density in Riser	<TD>MDRISER	<TD>MDRI	<TD>F 	<TD>4	<TD>KGM3	<TD>PPG
+<TR><TD>20	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #01 Tens(avg)	<TD>MLTA01	<TD>TA01	<TD>F 	<TD>4<TD>KDN	<TD>KLB
+<TR><TD>21	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #01 Tens(max)	<TD>MLTX01	<TD>TX01	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>22	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #02 Tens(avg)	<TD>MLTA02	<TD>TA02	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>23	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #02 Tens(max)	<TD>MLTX02	<TD>TX02	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>24	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #03 Tens(avg)	<TD>MLTA03	<TD>TA03	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>25	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #03 Tens(max)	<TD>MLTX03	<TD>TX03	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>26	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #04 Tens(avg)	<TD>MLTA04	<TD>TA04	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>27	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #04 Tens(max)	<TD>MLTX04	<TD>TX04	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>28	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #05 Tens(avg)	<TD>MLTA05	<TD>TA05	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>29	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #05 Tens(max)	<TD>MLTX05	<TD>TX05	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>30	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #06 Tens(avg)	<TD>MLTA06	<TD>TA06	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>31	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #06 Tens(max)	<TD>MLTX06	<TD>TX06<TD>	F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>32	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #07 Tens(avg)	<TD>MLTA07	<TD>TA07	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>33	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #07 Tens(max)	<TD>MLTX07	<TD>TX07	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>34	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #08 Tens(avg)	<TD>MLTA08	<TD>TA08	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>35	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #08 Tens(max)	<TD>MLTX08	<TD>TX08	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>36	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #09 Tens(avg)	<TD>MLTA09	<TD>TA09	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>37	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #09 Tens(max)	<TD>MLTX09	<TD>TX09	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>38	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #10 Tens(avg)	<TD>MLTA10	<TD>TA10	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>39	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #10 Tens(max)	<TD>MLTX10	<TD>TX10	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>40	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #11 Tens(avg)	<TD>MLTA11	<TD>TA11	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>41	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #11 Tens(max)	<TD>MLTX11	<TD>TX11	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>42	<TD><A HREF = "../index(2).htm#appb24.20">Mooring Line #12 Tens(avg)	<TD>MLTA12	<TD>TA12	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>43	<TD><A HREF = "../index(2).htm#appb24.21">Mooring Line #12 Tens(max)	<TD>MLTX12	<TD>TX12	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>44	<TD><A HREF = "../index(2).htm#appb24.44">Thruster #01, Force	<TD>THRF01	<TD>TF01	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>45	<TD><A HREF = "../index(2).htm#appb24.45">Thruster #01, Direction	<TD>THRD01	<TD>TD01<TD>	F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>46	<TD><A HREF = "../index(2).htm#appb24.44">Thruster #02, Force	<TD>THRF02	<TD>TF02	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>47	<TD><A HREF = "../index(2).htm#appb24.45">Thruster #02, Direction	<TD>THRD02	<TD>TD02	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>48	<TD><A HREF = "../index(2).htm#appb24.44">Thruster #03, Force	<TD>THRF03	<TD>TF03	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>49	<TD><A HREF = "../index(2).htm#appb24.45">Thruster #03, Direction	<TD>THRD03	<TD>TD03	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>50	<TD><A HREF = "../index(2).htm#appb24.44">Thruster #04, Force	<TD>THRF04	<TD>TF04	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>51	<TD><A HREF = "../index(2).htm#appb24.45">Thruster #04, Direction	<TD>THRD04	<TD>TD04	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>52	<TD><A HREF = "../index(2).htm#appb24.44">Thruster #05, Force	<TD>THRF05	<TD>TF05	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>53	<TD><A HREF = "../index(2).htm#appb24.45">Thruster #05, Direction	<TD>THRD05	<TD>TD05	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>54	<TD><A HREF = "../index(2).htm#appb24.44">Thruster #06, Force	<TD>THRF06	<TD>TF06	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>55	<TD><A HREF = "../index(2).htm#appb24.45">Thruster #06, Direction	<TD>THRF06	<TD>TD06	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>56	<TD><A HREF = "../index(2).htm#appb24.44">Thruster #07, Force	<TD>THRF07	<TD>TF07	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>57	<TD><A HREF = "../index(2).htm#appb24.45">Thruster #07, Direction	<TD>THRD07	<TD>TD07	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>58	<TD><A HREF = "../index(2).htm#appb24.44">Thruster #08, Force	<TD>THRF08	<TD>TF08	<TD>F 	<TD>4	<TD>KDN	<TD>KLB
+<TR><TD>59	<TD><A HREF = "../index(2).htm#appb24.45">Thruster #08, Direction	<TD>THRD08	<TD>TD08	<TD>F 	<TD>4	<TD>DEG	<TD>DEG
+<TR><TD>60<TD><A HREF = "../index(2).htm#appb24.60">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>61<TD><A HREF = "../index(2).htm#appb24.60">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>62<TD><A HREF = "../index(2).htm#appb24.60">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>63<TD><A HREF = "../index(2).htm#appb24.60">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>64<TD><A HREF = "../index(2).htm#appb24.60">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>

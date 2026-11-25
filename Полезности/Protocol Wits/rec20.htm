@@ -1,0 +1,106 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 20	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+
+<HEAD>
+<TITLE>
+WITS - Record 20
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 20 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 20   :  MUD REPORT</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  20 <TD WIDTH=200><B>Logical Record Type </B>  170
+                   <TD WIDTH=200><B>Auto/Manual</B> MANUAL 
+<TR><TD COLSPAN=3><B>Trigger</B>   [EVENT]    Transmission is operator-initiated 
+<TR><TD COLSPAN=3><B>Data Source</B> Manually-entered data for each mud report.  Record is sent when new data values are available 
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(3).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2	<TD><A HREF = "../index(3).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3	<TD><A HREF = "../index(3).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4	<TD><A HREF = "../index(3).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5	<TD><A HREF = "../index(2).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6	<TD><A HREF = "../index(2).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7	<TD><A HREF = "../index(2).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8	<TD><A HREF = "../index(2).htm#appb20.8">Mud Rept Depth (meas)	<TD>MREPDM	<TD>MRDM	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>9	<TD><A HREF = "../index(2).htm#appb20.9">Mud Rept Depth (vert)<TD>	MREPDV	<TD>MRDV	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>10	<TD><A HREF = "../index(2).htm#appb20.10">Mud Rept Number	<TD>MREPNUM	<TD>MNUM	<TD>S 	<TD>2	<TD>----	<TD>----
+<TR><TD>11	<TD><A HREF = "../index(2).htm#appb20.11">Mud Rept Mud Type<TD>	MRMTYPE	<TD>MTYP	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>12	<TD><A HREF = "../index(2).htm#appb20.12">Mud Rept Sample Location	<TD>MRSLOC	<TD>MLOC	<TD>A 	<TD>8	<TD>----	<TD>----
+<TR><TD>13	<TD><A HREF = "../index(2).htm#appb20.13">Mud Rept Sample Date	<TD>MRSDATE	<TD>MDAT	<TD>L 	<TD>4	<TD>----	<TD>----
+<TR><TD>14	<TD><A HREF = "../index(2).htm#appb20.14">Mud Rept Sample Time	<TD>MRSTIME	<TD>MTIM	<TD>L 	<TD>4	<TD>----	<TD>----
+<TR><TD>15	<TD><A HREF = "../index(2).htm#appb20.15">Mud Rept Mud Density	<TD>MRDENS	<TD>MDEN	<TD>F 	<TD>4	<TD>KGM3	<TD>PPG
+<TR><TD>16	<TD><A HREF = "../index(2).htm#appb20.16">Mud Rept Funnel Vis	<TD>MRFVIS	<TD>MFV 	<TD>S 	<TD>2	<TD>S/L	<TD>S/QT
+<TR><TD>17	<TD><A HREF = "../index(2).htm#appb20.17">Mud Rept Funnel Vis Temp	<TD>MRFVIST	<TD>MFVT	<TD>F 	<TD>4	<TD>DEGC	<TD>DEGF
+<TR><TD>18	<TD><A HREF = "../index(2).htm#appb20.18">Mud Rept Plastic Vis	<TD>MRPV	<TD>MPV 	<TD>F 	<TD>4	<TD>CP	<TD>CP
+<TR><TD>19	<TD><A HREF = "../index(2).htm#appb20.19">Mud Rept Yield Point	<TD>MRYP	<TD>MYP 	<TD>F 	<TD>4	<TD>PA	<TD>PHSF
+<TR><TD>20	<TD><A HREF = "../index(2).htm#appb20.20">Mud Rept Gel - 10 sec	<TD>MRGEL10S	<TD>MGL1	<TD>F 	<TD>4	<TD>PA	<TD>PHSF
+<TR><TD>21	<TD><A HREF = "../index(2).htm#appb20.21">Mud Rept Gel - 10 min	<TD>MRGEL10M	<TD>MGL2	<TD>F 	<TD>4	<TD>PA	<TD>PHSF
+<TR><TD>22	<TD><A HREF = "../index(2).htm#appb20.22">Mud Rept Gel - 30 min	<TD>MRGEL30M	<TD>MGL3	<TD>F 	<TD>4	<TD>PA	<TD>PHSF
+<TR><TD>23	<TD><A HREF = "../index(2).htm#appb20.23">Mud Rept Filtrate	<TD>MRFILT	<TD>MFIL	<TD>F 	<TD>4	<TD>C/30	<TD>C/30
+<TR><TD>24	<TD><A HREF = "../index(2).htm#appb20.24">Mud Rept Filter Cake	<TD>MRCAKE	<TD>MCAK	<TD>S 	<TD>2	<TD>MM	<TD>I/32
+<TR><TD>25	<TD><A HREF = "../index(2).htm#appb20.25">Mud Rept HTHP Temp	<TD>MRHT	<TD>MHT 	<TD>F 	<TD>4	<TD>DEGC	<TD>DEGF
+<TR><TD>26	<TD><A HREF = "../index(2).htm#appb20.26">Mud Rept HTHP Pressure	<TD>MRHP	<TD>MHP 	<TD>F 	<TD>4	<TD>KPA	<TD>PSI
+<TR><TD>27	<TD><A HREF = "../index(2).htm#appb20.27">Mud Rept HTHP Filtrate	<TD>MRHFILT	<TD>MHFI	<TD>F 	<TD>4	<TD>C/30	<TD>C/30
+<TR><TD>28	<TD><A HREF = "../index(2).htm#appb20.28">Mud Rept HTHP Filter Cake	<TD>MRHCAKE	<TD>MHCK	<TD>S 	<TD>2	<TD>MM	<TD>I/32
+<TR><TD>29	<TD><A HREF = "../index(2).htm#appb20.29">Mud Rept Solids % (retort)	<TD>MRSOLRET	<TD>MSOL	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>30	<TD><A HREF = "../index(2).htm#appb20.30">Mud Rept Water  % (retort)	<TD>MRWATRET	<TD>MWAT	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>31	<TD><A HREF = "../index(2).htm#appb20.31">Mud Rept Oil    % (retort)	<TD>MROILRET	<TD>MOIL	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>32	<TD><A HREF = "../index(2).htm#appb20.32">Mud Rept Sand   %	<TD>MRSAND	<TD>MSAN	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>33	<TD><A HREF = "../index(2).htm#appb20.33">Mud Rept Low Grav Sol %	<TD>MRLGSOL	<TD>MLGS	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>34	<TD><A HREF = "../index(2).htm#appb20.34">Mud Rept Solids % (calc)	<TD>MRSOLCAL	<TD>MSCA	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>35	<TD><A HREF = "../index(2).htm#appb20.35">Mud Rept Barite content	<TD>MRBARITE	<TD>MBRT	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>36	<TD><A HREF = "../index(2).htm#appb20.36">Mud Rept LCM content	<TD>MRLCM	<TD>MLCM	<TD>F 	<TD>4	<TD>KGM3	<TD>PPB
+<TR><TD>37	<TD><A HREF = "../index(2).htm#appb20.37">Mud Rept MBT capacity	<TD>MRMBT	<TD>MMBT	<TD>F 	<TD>4	<TD>KGM3	<TD>PPB 
+<TR><TD>38	<TD><A HREF = "../index(2).htm#appb20.38">Mud Rept pH	<TD>MRPH	<TD>MPH 	<TD>F 	<TD>4	<TD>----	<TD>----
+<TR><TD>39	<TD><A HREF = "../index(2).htm#appb20.39">Mud Rept pH sample temp	<TD>MRPHT	<TD>MPHT	<TD>F 	<TD>4	<TD>DEGC	<TD>DEGF
+<TR><TD>40	<TD><A HREF = "../index(2).htm#appb20.40">Mud Rept Pm	<TD>MRPM	<TD>MPM 	<TD>F 	<TD>4	<TD>MLML	<TD>MLML
+<TR><TD>41	<TD><A HREF = "../index(2).htm#appb20.41">Mud Rept Pf	<TD>MRPF	<TD>MPF <TD>	F 	<TD>4	<TD>MLML	<TD>MLML
+<TR><TD>42	<TD><A HREF = "../index(2).htm#appb20.42">Mud Rept Mf	<TD>MRMF	<TD>MMF 	<TD>F 	<TD>4	<TD>MLML	<TD>MLML
+<TR><TD>43	<TD><A HREF = "../index(2).htm#appb20.43">Mud Rept P1	<TD>MRP1	<TD>MRP1	<TD>F 	<TD>4	<TD>MLML	<TD>MLML
+<TR><TD>44	<TD><A HREF = "../index(2).htm#appb20.44">Mud Rept P2	<TD>MRP2	<TD>MRP2	<TD>F 	<TD>4	<TD>MLML	<TD>MLML
+<TR><TD>45	<TD><A HREF = "../index(2).htm#appb20.45">Mud Rept Chlorides	<TD>MRCHLOR	<TD>MCHL	<TD>F 	<TD>4	<TD>MG/L	<TD>MG/L
+<TR><TD>46	<TD><A HREF = "../index(2).htm#appb20.46">Mud Rept Calcium	<TD>MRCALC	<TD>MCAL	<TD>F 	<TD>4	<TD>MG/L	<TD>MG/L
+<TR><TD>47	<TD><A HREF = "../index(2).htm#appb20.47">Mud Rept Magnesium	<TD>MRMAG	<TD>MMAG	<TD>F 	<TD>4	<TD>MG/L	<TD>MG/L
+<TR><TD>48	<TD><A HREF = "../index(2).htm#appb20.48">Mud Rept Potassium	<TD>MRPOT	<TD>MPOT	<TD>F 	<TD>4	<TD>MG/L	<TD>MG/L
+<TR><TD>49	<TD><A HREF = "../index(2).htm#appb20.49">Mud Rept Rheometer temp	<TD>MRRHETEM	<TD>MRHT	<TD>F 	<TD>4	<TD>DEGC	<TD>DEGF
+<TR><TD>50	<TD><A HREF = "../index(2).htm#appb20.50">Mud Rept Viscom   3 rpm	<TD>MRVIS3	<TD>M3	<TD>F 	<TD>4	<TD>----	<TD>----
+<TR><TD>51	<TD><A HREF = "../index(2).htm#appb20.51">Mud Rept Viscom   6 rpm	<TD>MRVIS6	<TD>M6	<TD>F 	<TD>4	<TD>----	<TD>----
+<TR><TD>52	<TD><A HREF = "../index(2).htm#appb20.52">Mud Rept Viscom 100 rpm	<TD>MRVIS100	<TD>M100	<TD>F 	<TD>4	<TD>----<TD>	----
+<TR><TD>53	<TD><A HREF = "../index(2).htm#appb20.53">Mud Rept Viscom 200 rpm	<TD>MRVIS200	<TD>M200	<TD>F 	<TD>4	<TD>----	<TD>----
+<TR><TD>54	<TD><A HREF = "../index(2).htm#appb20.54">Mud Rept Viscom 300 rpm	<TD>MRVIS300	<TD>M300	<TD>F 	<TD>4	<TD>----	<TD>----
+<TR><TD>55	<TD><A HREF = "../index(2).htm#appb20.55">Mud Rept Viscom 600 rpm	<TD>MRVIS600	<TD>M600	<TD>F 	<TD>4	<TD>----	<TD>----
+<TR><TD>56	<TD><A HREF = "../index(2).htm#appb20.56">Mud Rept Brine %	<TD>MRBRINE	<TD>MBRI	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>57	<TD><A HREF = "../index(2).htm#appb20.57">Mud Rept Alkalinity	<TD>MRALK	<TD>MALK	<TD>F 	<TD>4	<TD>MLML	<TD>MLML
+<TR><TD>58	<TD><A HREF = "../index(2).htm#appb20.58">Mud Rept Lime content	<TD>MRLIME	<TD>MLIM	<TD>F 	<TD>4	<TD>KGM3	<TD>PPB
+<TR><TD>59	<TD><A HREF = "../index(2).htm#appb20.59">Mud Rept Elect. Stability	<TD>MRELECST	<TD>MELS	<TD>F 	<TD>4	<TD>V	<TD>V
+<TR><TD>60	<TD><A HREF = "../index(2).htm#appb20.60">Mud Rept CaCl, Wt %	<TD>MRCACL	<TD>MCCL	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>61<TD><A HREF = "../index(2).htm#appb20.61">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>62<TD><A HREF = "../index(2).htm#appb20.61">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>63<TD><A HREF = "../index(2).htm#appb20.61">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>64<TD><A HREF = "../index(2).htm#appb20.61">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>65<TD><A HREF = "../index(2).htm#appb20.61">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>

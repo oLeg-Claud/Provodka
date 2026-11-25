@@ -1,0 +1,71 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 14	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+
+<HEAD>
+<TITLE>
+WITS - Record 14
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 14 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 14   :  LAGGED CONTINUOUS MUD PROPERTIES</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  14 <TD WIDTH=200><B>Logical Record Type </B>  164
+                   <TD WIDTH=200><B>Auto/Manual</B> AUTOMATIC
+<TR><TD COLSPAN=3><B>Trigger</B>   [TIME], [DEPTH] or [TIME/DEPTH]     Transmit at the specified time interval (secs), depth interval (feet or meters) based on the returns depth, or a combination of these.
+<TR><TD COLSPAN=3><B>Data Source</B>   Data acquired in real-time and computed over the interval.  Record transmitted and computations reset when the triggering interval occurs.  If a depth interval is specified, it is active until bottoms-up occurs.  Time intervals, if specified, are reset following the transmission of the record by either depth or time trigger.  Not sent if no circulation is taking place
+</TABLE>
+<P>
+
+<TABLE BORDER>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(3).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2<TD><A HREF = "../index(3).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3<TD><A HREF = "../index(3).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4<TD><A HREF = "../index(3).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5<TD><A HREF = "../index(3).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6<TD><A HREF = "../index(3).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7<TD><A HREF = "../index(3).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8<TD><A HREF = "../index(3).htm#appb14.8">Depth Returns (meas)	<TD>DEPTRETM	<TD>DRTM	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>9<TD><A HREF = "../index(3).htm#appb14.9">Depth Returns (vert)	<TD>DEPTRETV	<TD>DRTV	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>10<TD><A HREF = "../index(3).htm#appb14.10">Mud Density In  (lagd)	<TD>MDIL	<TD>MDIL	<TD>F 	<TD>4	<TD>KGM3	<TD>PPG
+<TR><TD>11<TD><A HREF = "../index(3).htm#appb14.11">Mud Density Out (avg)	<TD>MDOA	<TD>MDOA	<TD>F 	<TD>4<TD>KGM3	<TD>PPG
+<TR><TD>12<TD><A HREF = "../index(3).htm#appb14.12">Mud Temperature In   (lagd)	<TD>MTIL	<TD>MTIL	<TD>F 	<TD>4	<TD>DEGC	<TD>DEGF
+<TR><TD>13<TD><A HREF = "../index(3).htm#appb14.13">Mud Temperature Out  (avg)	<TD>MTOA	<TD>MTOA	<TD>F 	<TD>4	<TD>DEGC	<TD>DEGF
+<TR><TD>14<TD><A HREF = "../index(3).htm#appb14.14">Mud Conductivity In  (lagd)	<TD>MCIL	<TD>MCIL	<TD>F 	<TD>4	<TD>MMHO	<TD>MMHO
+<TR><TD>15<TD><A HREF = "../index(3).htm#appb14.15">Mud Conductivity Out (avg)	<TD>MCOA	<TD>MCOA<TD>	F 	<TD>4	<TD>MMHO	<TD>MMHO
+<TR><TD>16<TD><A HREF = "../index(3).htm#appb14.16">Hyd.Sulfide Haz.Pot. (avg)	<TD>HSHPA	<TD>HHPA	<TD>F 	<TD>4	<TD>PPM 	<TD>PPM 
+<TR><TD>17<TD><A HREF = "../index(3).htm#appb14.17">Hyd.Sulfide pH       (avg)	<TD>HSPHA	<TD>HPHA	<TD>F 	<TD>4	<TD>----	<TD>----
+<TR><TD>18<TD><A HREF = "../index(3).htm#appb14.18">Hyd.Sulfide pHS      (avg)	<TD>HSPHSA	<TD>HPSA	<TD>F 	<TD>4	<TD>%   	<TD>%   
+<TR><TD>19<TD><A HREF = "../index(3).htm#appb14.19">Gas In  (lagd)	<TD>GASIL	<TD>GSIL	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>20<TD><A HREF = "../index(3).htm#appb14.20">Gas (avg)	<TD>GASA	<TD>GASA	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>21<TD><A HREF = "../index(3).htm#appb14.21">Gas (max)	<TD>GASX	<TD>GASX	<TD>F 	<TD>4	<TD>%	<TD>%
+<TR><TD>22<TD><A HREF = "../index(3).htm#appb14.22">Carbon Dioxide       (avg)	<TD>CO2A	<TD>CO2A	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>23<TD><A HREF = "../index(3).htm#appb14.23">Hydrogen Sulfide     (avg)	<TD>HSA	<TD>HSA<TD>	L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>24<TD><A HREF = "../index(3).htm#appb14.24">Hydrogen Sulfide     (max)	<TD>HSX	<TD>HSX	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>25<TD><A HREF = "../index(3).htm#appb14.25">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>26<TD><A HREF = "../index(3).htm#appb14.25">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>27<TD><A HREF = "../index(3).htm#appb14.25">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>28<TD><A HREF = "../index(3).htm#appb14.25">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>29<TD><A HREF = "../index(3).htm#appb14.25">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+
+</TABLE>
+</FONT>
+<CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,90 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 13	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+
+<HEAD>
+<TITLE>
+WITS - Record 13
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 13 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 13   :  CHROMATOGRAPH GASES  DEPTH-BASED</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  13 <TD WIDTH=200><B>Logical Record Type </B>  163
+                   <TD WIDTH=200><B>Auto/Manual</B> AUTOMATIC
+<TR><TD COLSPAN=3><B>Trigger</B>   [DEPTH]     Transmit at the specified depth interval (feet or meters) based on the returns depth.
+<TR><TD COLSPAN=3><B>Data Source</B>   Data acquired in real-time from each valid chomatograph cycle.  Record transmitted and computations reset when the triggering interval occurs.  Record not sent if circulation not taking place or if bottoms up has been achieved resulting in no further increase in returns depth
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "../index(2).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(2).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(2).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(2).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2<TD><A HREF = "../index(2).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3<TD><A HREF = "../index(2).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4<TD><A HREF = "../index(2).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5<TD><A HREF = "../index(2).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6<TD><A HREF = "../index(2).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7<TD><A HREF = "../index(2).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8	<TD><A HREF = "../index(2).htm#appb13.8">Depth Returns (meas)	<TD>DEPTRETM	<TD>DRTM	<TD>F 	<TD>4<TD>	M	<TD>F
+<TR><TD>9	<TD><A HREF = "../index(2).htm#appb13.9">Depth Returns (vert)<TD>	DEPTRETV	<TD>DRTV	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>10	<TD><A HREF = "../index(2).htm#appb13.10">Methane     (C1)  (avg)	<TD>METHA	<TD>MTHA	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>11	<TD><A HREF = "../index(2).htm#appb13.11">Methane     (C1)  (min)	<TD>METHN	<TD>MTHN	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>12	<TD><A HREF = "../index(2).htm#appb13.12">Methane     (C1)  (max)	<TD>METHX	<TD>MTHX	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>13	<TD><A HREF = "../index(2).htm#appb13.13">Ethane      (C2)  (avg)	<TD>ETHA	<TD>ETHA	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>14	<TD><A HREF = "../index(2).htm#appb13.14">Ethane      (C2)  (min)	<TD>ETHN	<TD>ETHN	<TD>L <TD>	4	<TD>PPM	<TD>PPM
+<TR><TD>15	<TD><A HREF = "../index(2).htm#appb13.15">Ethane      (C2)  (max)	<TD>ETHX	<TD>ETHX	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>16	<TD><A HREF = "../index(2).htm#appb13.16">Propane     (C3)  (avg)	<TD>PROPA	<TD>PRPA<TD>	L <TD>	4	<TD>PPM	<TD>PPM
+<TR><TD>17	<TD><A HREF = "../index(2).htm#appb13.17">Propane     (C3)  (min)	<TD>PROPN	<TD>PRPN	<TD>L <TD>	4	<TD>PPM	<TD>PPM
+<TR><TD>18	<TD><A HREF = "../index(2).htm#appb13.18">Propane     (C3)  (max)	<TD>PROPX	<TD>PRPX	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>19  <TD><A HREF = "../index(2).htm#appb13.19">Iso-Butane  (IC4) (avg)	<TD>IBUTA	<TD>IBTA	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>20	<TD><A HREF = "../index(2).htm#appb13.20">Iso-Butane  (IC4) (min)	<TD>IBUTN	<TD>IBTN	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>21	<TD><A HREF = "../index(2).htm#appb13.21">Iso-Butane  (IC4) (max)	<TD>IBUTX	<TD>IBTX	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>22	<TD><A HREF = "../index(2).htm#appb13.22">Nor-Butane  (NC4) (avg)	<TD>NBUTA	<TD>NBTA	<TD>L <TD>	4	<TD>PPM	<TD>PPM
+<TR><TD>23	<TD><A HREF = "../index(2).htm#appb13.23">Nor-Butane  (NC4) (min)	<TD>NBUTN	<TD>NBTN	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>24	<TD><A HREF = "../index(2).htm#appb13.24">Nor-Butane  (NC4) (max)	<TD>NBUTX<TD>	NBTX<TD>	L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>25	<TD><A HREF = "../index(2).htm#appb13.25">Iso-Pentane (IC5) (avg)	<TD>IPENTA	<TD>IPNA	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>26	<TD><A HREF = "../index(2).htm#appb13.26">Iso-Pentane (IC5) (min)	<TD>IPENTN	<TD>IPNN	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>27	<TD><A HREF = "../index(2).htm#appb13.27">Iso-Pentane (IC5) (max)	<TD>IPENTX	<TD>IPNX	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>28	<TD><A HREF = "../index(2).htm#appb13.28">Nor-Pentane (NC5) (avg)	<TD>NPENTA	<TD>NPNA	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>29	<TD><A HREF = "../index(2).htm#appb13.29">Nor-Pentane (NC5) (min)	<TD>NPENTN	<TD>NPNN	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>30	<TD><A HREF = "../index(2).htm#appb13.30">Nor-Pentane (NC5) (max)	<TD>NPENTX	<TD>NPNX	<TD>L <TD>	4	<TD>PPM	<TD>PPM
+<TR><TD>31	<TD><A HREF = "../index(2).htm#appb13.31">Neo-Pentane (EC5) (avg)	<TD>EPENTA	<TD>EPNA	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>32	<TD><A HREF = "../index(2).htm#appb13.32">Neo-Pentane (EC5) (min)	<TD>EPENTN	<TD>EPNN	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>33	<TD><A HREF = "../index(2).htm#appb13.33">Neo-Pentane (EC5) (max)	<TD>EPENTX	<TD>EPNX	<TD>L <TD>	4	<TD>PPM	<TD>PPM
+<TR><TD>34	<TD><A HREF = "../index(2).htm#appb13.34">Iso-Hexane  (IC6) (avg)	<TD>IHEXA	<TD>IHXA	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>35	<TD><A HREF = "../index(2).htm#appb13.35">Iso-Hexane  (IC6) (min)	<TD>IHEXN	<TD>IHXN	<TD>L <TD>	4	<TD>PPM	<TD>PPM
+<TR><TD>36	<TD><A HREF = "../index(2).htm#appb13.36">Iso-Hexane  (IC6) (max)<TD>	IHEXX	<TD>IHXX	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>37	<TD><A HREF = "../index(2).htm#appb13.37">Nor-Hexane  (NC6) (avg)	<TD>NHEXA	<TD>NHXA	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>38	<TD><A HREF = "../index(2).htm#appb13.38">Nor-Hexane  (NC6) (min)	<TD>NHEXN	<TD>NHXN	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>39	<TD><A HREF = "../index(2).htm#appb13.39">Nor-Hexane  (NC6) (max)<TD>	NHEXX	<TD>NHXX	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>40	<TD><A HREF = "../index(2).htm#appb13.40">Carbon Dioxide    (avg)	<TD>CO2A<TD>CO2A	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>41	<TD><A HREF = "../index(2).htm#appb13.41">Carbon Dioxide    (min)	<TD>CO2N	<TD>CO2N<TD>	L <TD>	4	<TD>PPM	<TD>PPM
+<TR><TD>42	<TD><A HREF = "../index(2).htm#appb13.42">Carbon Dioxide    (max)	<TD>CO2X	<TD>CO2X	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>43	<TD><A HREF = "../index(2).htm#appb13.43">Acetylene	<TD>ACET	<TD>ACET	<TD>L 	<TD>4	<TD>PPM	<TD>PPM
+<TR><TD>44<TD><A HREF = "../index(2).htm#appb13.44">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>45<TD><A HREF = "../index(2).htm#appb13.44">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>46<TD><A HREF = "../index(2).htm#appb13.44">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>47<TD><A HREF = "../index(2).htm#appb13.44">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>48<TD><A HREF = "../index(2).htm#appb13.44">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>

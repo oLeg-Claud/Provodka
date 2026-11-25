@@ -1,0 +1,75 @@
+<HEAD>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 6	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+<TITLE>
+WITS - Record 6
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 6 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 6   :  TRIPPING/CASING  CONNECTION-BASED</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  6 <TD WIDTH=200><B>Logical Record Type </B>  156
+                   <TD WIDTH=200><B>Auto/Manual</B> AUTOMATIC
+<TR><TD COLSPAN=3><B>Trigger</B>   [EVENT]     Transmit when first out of slips following a connection 
+<TR><TD COLSPAN=3><B>Data Source</B> Data acquired in real-time and computed from first out of slips to next first out of slips.  Only sent when tripping.  Average and maximum values reset following the transmission of the record 
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "index(1).htm">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(2).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(2).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(2).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2<TD><A HREF = "../index(2).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3<TD><A HREF = "../index(2).htm#appb1.3">Record Identifier<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4<TD><A HREF = "../index(2).htm#appb1.4">Sequence Identifier<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5<TD><A HREF = "../index(2).htm#appb1.5">Date	<TD>DATE<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6<TD><A HREF = "../index(2).htm#appb1.6">Time	<TD>TIME<TD>TIME<TD>L<TD>4	<TD>----<TD>----
+<TR><TD>7<TD><A HREF = "../index(2).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>---- 
+<TR><TD>8<TD><A HREF = "../index(2).htm#appb6.8">Depth Bit (meas)<TD>DEPTBITM<TD>DBTM<TD>F<TD>4<TD>M<TD>F
+<TR><TD>9<TD><A HREF = "../index(2).htm#appb6.9">Depth Bit (vert)<TD>DEPTBITV	<TD>DBTV<TD>F<TD>4<TD>M<TD>F
+<TR><TD>10<TD><A HREF = "../index(2).htm#appb6.10">Depth Hole (meas)<TD>DEPTMEAS<TD>DMEA<TD>F<TD>4	<TD>M<TD>F
+<TR><TD>11<TD><A HREF = "../index(2).htm#appb6.11">Depth Hole (vert)<TD>	DEPTVERT	<TD>DVER<TD>F<TD>4	<TD>M<TD>F
+<TR><TD>12<TD><A HREF = "../index(2).htm#appb6.12">Trip Number	<TD>TRIPNUM	<TD>TNUM<TD>S <TD>2<TD>----<TD>----
+<TR><TD>13<TD><A HREF = "../index(2).htm#appb6.13">Connections Done	<TD>CONNDONE	<TD>CDON<TD>S<TD>2<TD>----<TD>----
+<TR><TD>14<TD><A HREF = "../index(2).htm#appb6.14">Connections Remaining	<TD>CONNREM<TD>CREM<TD>S <TD>	2<TD>----<TD>----
+<TR><TD>15<TD><A HREF = "../index(2).htm#appb6.15">Elapsed Time In-Slips	<TD>ETIMESLP	<TD>ETSL<TD>S<TD>2<TD>SEC<TD>SEC
+<TR><TD>16<TD><A HREF = "../index(2).htm#appb6.16">Elapsed Time Out-of-Slips	<TD>ETIMEOS<TD>ETOS<TD>S<TD>2<TD>SEC<TD>	SEC
+<TR><TD>17<TD><A HREF = "../index(2).htm#appb6.17">Running Speed -up (max)<TD>	RSUX<TD>RSUX<TD>F<TD>	4<TD>M/S<TD>FPM
+<TR><TD>18<TD><A HREF = "../index(2).htm#appb6.18">Running Speed -up (avg)<TD>RSUA<TD>RSUA<TD>F<TD>4<TD>M/S	<TD>FPM
+<TR><TD>19<TD><A HREF = "../index(2).htm#appb6.19">Running Speed -down (max)<TD>RSDX<TD>RSDX<TD>F<TD>4<TD>M/S<TD>	FPM
+<TR><TD>20<TD><A HREF = "../index(2).htm#appb6.20">Running Speed -down (avg)<TD>RSDA	<TD>RSDA<TD>F<TD>4<TD>M/S<TD>	FPM
+<TR><TD>21<TD><A HREF = "../index(2).htm#appb6.21">Hookload (max)	<TD>HKLX<TD>HKLX<TD>F <TD>4	<TD>KDN	<TD>KLB
+<TR><TD>22<TD><A HREF = "../index(2).htm#appb6.22">Hookload (min)	<TD>HKLN<TD>HKLN<TD>F<TD>4<TD>KDN	<TD>KLB
+<TR><TD>23<TD><A HREF = "../index(2).htm#appb6.23">Hookload (avg)	<TD>HKLA<TD>HKLA<TD>F<TD>4<TD>KDN	<TD>KLB
+<TR><TD>24<TD><A HREF = "../index(2).htm#appb6.24">Torque - Make Up  (max)<TD>TORQMUX<TD>TQMX<TD>F<TD>4<TD>KNM<TD>KFLB
+<TR><TD>25<TD><A HREF = "../index(2).htm#appb6.25">Torque - Breakout (max)	<TD>TORQBOX	<TD>TQBX<TD>	F <TD>	4	<TD>KNM	<TD>KFLB
+<TR><TD>26<TD><A HREF = "../index(2).htm#appb6.26">Fill/Gain Volume Obs.<TD>	FVOLO<TD>	FVO<TD>	F<TD> 	4	<TD>M3	<TD>BBL
+<TR><TD>27<TD><A HREF = "../index(2).htm#appb6.27">Fill/Gain Volume Exp.	<TD>FVOLE	<TD>FVE<TD>	F <TD>	4	<TD>M3	<TD>BBL
+<TR><TD>28<TD><A HREF = "../index(2).htm#appb6.28">Fill/Gain Volume Obs.(cum)	<TD>FVOLOC<TD>	FVOC<TD>F 	<TD>4	<TD>M3<TD>	BBL
+<TR><TD>29<TD><A HREF = "../index(2).htm#appb6.29">Fill/Gain Volume Exp (cum)	<TD>FVOLEC<TD>FVEC<TD>F<TD>4<TD>M3<TD>	BBL
+<TR><TD>30<TD><A HREF = "../index(2).htm#appb6.30">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>31<TD><A HREF = "../index(2).htm#appb6.30">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>32<TD><A HREF = "../index(2).htm#appb6.30">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>33<TD><A HREF = "../index(2).htm#appb6.30">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>34<TD><A HREF = "../index(2).htm#appb6.30">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+</TABLE>
+
+</CENTER>
+
+</BODY>
+</HTML>
+

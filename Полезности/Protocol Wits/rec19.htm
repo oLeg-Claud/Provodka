@@ -1,0 +1,134 @@
+<HTML>
+
+<!-- WITS 1.1 Specification	Pre Defined Record 19	12May96 R.J.Rose	-->
+<!-- 				Change Log					-->
+<!-- 										-->
+
+<HEAD>
+<TITLE>
+WITS - Record 19
+</TITLE>
+
+<META NAME="description" CONTENT="Wellsite Information Transfer Specification - Record 19 layout">
+
+</HEAD>
+
+<BODY>
+
+<CENTER>
+
+<h3>RECORD # 19   :  CONFIGURATION</h3>
+
+<TABLE BORDER=2 WIDTH=650>
+<TR><TD WIDTH=200><B>WITS Record ID</B>  19 <TD WIDTH=200><B>Logical Record Type </B>  169
+                   <TD WIDTH=200><B>Auto/Manual</B> MANUAL 
+<TR><TD COLSPAN=3><B>Trigger</B>   [EVENT]    Transmission is operator-initiated 
+<TR><TD COLSPAN=3><B>Data Source</B> Manually-entered data.  Record is sent when new data values are available 
+</TABLE>
+<P>
+
+<TABLE BORDER=5>
+
+<TH ALIGN=CENTER>Item<TH ALIGN CENTER>Description<TH ALIGN CENTER>Long Mnemonic<TH ALIGN CENTER>Short Mnemonic
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_datatype">Type<TH ALIGN CENTER>Length<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_met">Metric Units
+<TH ALIGN CENTER><A HREF = "../index(3).htm#appd_fps">FPS Units
+	
+<TR><TD>1<TD><A HREF = "../index(3).htm#appb1.1">Well Identifier<TD>WELLID<TD>WID<TD>A<TD>16<TD>----<TD>----
+<TR><TD>2	<TD><A HREF = "../index(3).htm#appb1.2">Sidetrack/Hole Sect No.<TD>STKNUM<TD>SKNO<TD>S<TD>2<TD>----<TD>----
+<TR><TD>3	<TD><A HREF = "../index(3).htm#appb1.3">Record Identifier	<TD>RECID<TD>RID<TD>S<TD>2<TD>----<TD>----
+<TR><TD>4	<TD><A HREF = "../index(3).htm#appb1.4">Sequence Identifier	<TD>SEQID<TD>SQID<TD>L<TD>4<TD>----<TD>----
+<TR><TD>5	<TD><A HREF = "../index(2).htm#appb1.5">Date	<TD>DATE	<TD>DATE<TD>L<TD>4<TD>----<TD>----
+<TR><TD>6	<TD><A HREF = "../index(2).htm#appb1.6">Time	<TD>TIME	<TD>TIME<TD>L<TD>4	<TD>----	<TD>----
+<TR><TD>7	<TD><A HREF = "../index(2).htm#appb1.7">Activity Code	<TD>ACTCOD<TD>ACTC<TD>S<TD>2<TD>----<TD>----
+<TR><TD>8	<TD><A HREF = "../index(2).htm#appb19.8">Depth Hole  (meas)	<TD>DEPTMEAS	<TD>DMEA	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>9	<TD><A HREF = "../index(2).htm#appb19.9">Depth Hole  (vert)	<TD>DEPTVERT	<TD>DVER	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>10	<TD><A HREF = "../index(2).htm#appb19.10">No. Drill String Sections	<TD>DSNUM	<TD>DSNO	<TD>S 	<TD>2	<TD>----	<TD>----
+<TR><TD>11	<TD><A HREF = "../index(2).htm#appb19.11">DS Section 1 OD	<TD>DS1OD	<TD>D1OD	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>12	<TD><A HREF = "../index(2).htm#appb19.12">DS Section 1 ID	<TD>DS1ID	<TD>D1ID	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>13	<TD><A HREF = "../index(2).htm#appb19.13">DS Section 1 Tool Joint ID	<TD>DS1JID	<TD>D1JI	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>14	<TD><A HREF = "../index(2).htm#appb19.14">DS Section 1 Tool Joint OD	<TD>DS1JOD	<TD>D1JO	<TD>F 	<TD>4	<TD>MM<TD>	IN
+<TR><TD>15	<TD><A HREF = "../index(2).htm#appb19.15">DS Section 1 Mass/Length	<TD>DS1MASS	<TD>D1MA	<TD>F 	<TD>4	<TD>KG/M	<TD>LB/F
+<TR><TD>16	<TD><A HREF = "../index(2).htm#appb19.16">DS Section 1 Length	<TD>DS1LEN	<TD>D1LE<TD>	F 	<TD>4	<TD>M<TD>F
+<TR><TD>17	<TD><A HREF = "../index(2).htm#appb19.17">DS Section 2 OD	<TD>DS2OD	<TD>D2OD	<TD>F 	<TD>4<TD>	MM<TD>	IN
+<TR><TD>18	<TD><A HREF = "../index(2).htm#appb19.18">DS Section 2 ID	<TD>DS2ID	<TD>D2ID<TD>	F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>19	<TD><A HREF = "../index(2).htm#appb19.19">DS Section 2 Tool Joint ID	<TD>DS2JID	<TD>D2JI<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>20	<TD><A HREF = "../index(2).htm#appb19.20">DS Section 2 Tool Joint OD	<TD>DS2JOD	<TD>D2JO	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>21	<TD><A HREF = "../index(2).htm#appb19.21">DS Section 2 Mass/Length	<TD>DS2MASS	<TD>D2MA	<TD>F 	<TD>4	<TD>KG/M	<TD>LB/F
+<TR><TD>22	<TD><A HREF = "../index(2).htm#appb19.22">DS Section 2 Length	<TD>DS2LEN	<TD>D2LE	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>23	<TD><A HREF = "../index(2).htm#appb19.23">DS Section 3 OD	<TD>DS3OD	<TD>D3OD	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>24	<TD><A HREF = "../index(2).htm#appb19.24">DS Section 3 ID	<TD>DS3ID	<TD>D3ID	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>25	<TD><A HREF = "../index(2).htm#appb19.25">DS Section 3 Tool Joint ID	<TD>DS3JID	<TD>D3JI	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>26	<TD><A HREF = "../index(2).htm#appb19.26">DS Section 3 Tool Joint OD	<TD>DS3JOD	<TD>D3JO	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>27	<TD><A HREF = "../index(2).htm#appb19.27">DS Section 3 Mass/Length	<TD>DS3MASS	<TD>D3MA	<TD>F 	<TD>4	<TD>KG/M	<TD>LB/F
+<TR><TD>28	<TD><A HREF = "../index(2).htm#appb19.28">DS Section 3 Length	<TD>DS3LEN	<TD>D3LE	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>29	<TD><A HREF = "../index(2).htm#appb19.29">DS Section 4 OD	<TD>DS4OD	<TD>D4OD	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>30	<TD><A HREF = "../index(2).htm#appb19.30">DS Section 4 ID	<TD>DS4ID	<TD>D4ID	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>31	<TD><A HREF = "../index(2).htm#appb19.31">DS Section 4 Tool Joint ID	<TD>DS4JID	<TD>D4JI	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>32	<TD><A HREF = "../index(2).htm#appb19.32">DS Section 4 Tool Joint OD	<TD>DS4JOD	<TD>D4JO	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>33	<TD><A HREF = "../index(2).htm#appb19.33">DS Section 4 Mass/Length	<TD>DS4MASS	<TD>D4MA	<TD>F 	<TD>4	<TD>KG/M	<TD>LB/F
+<TR><TD>34	<TD><A HREF = "../index(2).htm#appb19.34">DS Section 4 Length	<TD>DS4LEN	<TD>D4LE	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>35	<TD><A HREF = "../index(2).htm#appb19.35">DS Section 5 OD	<TD>DS5OD	<TD>D5OD	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>36	<TD><A HREF = "../index(2).htm#appb19.36">DS Section 5 ID	<TD>DS5ID	<TD>D5ID	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>37	<TD><A HREF = "../index(2).htm#appb19.37">DS Section 5 Tool Joint ID	<TD>DS5JID	<TD>D5JI	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>38	<TD><A HREF = "../index(2).htm#appb19.38">DS Section 5 Tool Joint OD	<TD>DS5JOD	<TD>D5JO	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>39	<TD><A HREF = "../index(2).htm#appb19.39">DS Section 5 Mass/Length	<TD>DS5MASS	<TD>D5MA	<TD>F 	<TD>4	<TD>KG/M	<TD>LB/F
+<TR><TD>40	<TD><A HREF = "../index(2).htm#appb19.40">DS Section 5 Length	<TD>DS5LEN	<TD>D5LE	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>41	<TD><A HREF = "../index(2).htm#appb19.41">DS Section 6 OD	<TD>DS6OD	<TD>D6OD	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>42	<TD><A HREF = "../index(2).htm#appb19.42">DS Section 6 ID	<TD>DS6ID<TD>	D6ID<TD>	F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>43	<TD><A HREF = "../index(2).htm#appb19.43">DS Section 6 Tool Joint ID	<TD>DS6JID	<TD>D6JI	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>44	<TD><A HREF = "../index(2).htm#appb19.44">DS Section 6 Tool Joint OD	<TD>DS6JOD	<TD>D6JO	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>45	<TD><A HREF = "../index(2).htm#appb19.45">DS Section 6 Mass/Length	<TD>DS6MASS	<TD>D6MA	<TD>F 	<TD>4	<TD>KG/M	<TD>LB/F
+<TR><TD>46	<TD><A HREF = "../index(2).htm#appb19.46">Kelly ID<TD>	KELLYID	<TD>KID 	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>47	<TD><A HREF = "../index(2).htm#appb19.47">Kelly Length	<TD>KELLYLEN	<TD>KLEN	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>48	<TD><A HREF = "../index(2).htm#appb19.48">Drill Pipe Stand Length	<TD>DPSTDLEN	<TD>SLEN	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>49	<TD><A HREF = "../index(2).htm#appb19.49">No. Joints/Stand	<TD>DPSTDJNT	<TD>SJNT	<TD>S 	<TD>2	<TD>----	<TD>----
+<TR><TD>50	<TD><A HREF = "../index(2).htm#appb19.50">No. Hole Sections	<TD>HOLENUM	<TD>HLNO	<TD>S 	<TD>2	<TD>----	<TD>----
+<TR><TD>51	<TD><A HREF = "../index(2).htm#appb19.51">Hole Section 1 Diam	<TD>HL1DIAM	<TD>H1DI	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>52	<TD><A HREF = "../index(2).htm#appb19.52">Hole Section 1 Length	<TD>HL1LEN	<TD>H1LE	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>53	<TD><A HREF = "../index(2).htm#appb19.53">Hole Section 2 Diam	<TD>HL2DIAM	<TD>H2DI	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>54	<TD><A HREF = "../index(2).htm#appb19.54">Hole Section 2 Length	<TD>HL2LEN	<TD>H2LE	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>55	<TD><A HREF = "../index(2).htm#appb19.55">Hole Section 3 Diam	<TD>HL3DIAM	<TD>H3DI	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>56	<TD><A HREF = "../index(2).htm#appb19.56">Hole Section 3 Length	<TD>HL3LEN	<TD>H3LE	<TD>F <TD>4	<TD>M	<TD>F
+<TR><TD>57	<TD><A HREF = "../index(2).htm#appb19.57">Hole Section 4 Diam	<TD>HL4DIAM	<TD>H4DI	<TD>F 	<TD>4	<TD>MM<TD>	IN
+<TR><TD>58	<TD><A HREF = "../index(2).htm#appb19.58">Hole Section 4 Length	<TD>HL4LEN	<TD>H4LE	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>59	<TD><A HREF = "../index(2).htm#appb19.59">Hole Section 5 Diam	<TD>HL5DIAM	<TD>H5DI	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>60	<TD><A HREF = "../index(2).htm#appb19.60">Pump 1 Capacity	<TD>PUMP1CAP	<TD>P1CA	<TD>F 	<TD>4	<TD>M3ST	<TD>B/ST
+<TR><TD>61	<TD><A HREF = "../index(2).htm#appb19.61">Pump 1 Efficiency	<TD>PUMP1EFF	<TD>P1EF	<TD>S 	<TD>2	<TD>%	<TD>%
+<TR><TD>62	<TD><A HREF = "../index(2).htm#appb19.62">Pump 2 Capacity	<TD>PUMP2CAP	<TD>P2CA	<TD>F 	<TD>4	<TD>M3ST	<TD>B/ST
+<TR><TD>63	<TD><A HREF = "../index(2).htm#appb19.63">Pump 2 Efficiency	<TD>PUMP2EFF	<TD>P2EF	<TD>S 	<TD>2	<TD>%	<TD>%
+<TR><TD>64	<TD><A HREF = "../index(2).htm#appb19.64">Pump 3 Capacity	<TD>PUMP3CAP	<TD>P3CA	<TD>F 	<TD>4	<TD>M3ST	<TD>B/ST
+<TR><TD>65 	<TD><A HREF = "../index(2).htm#appb19.65">Pump 3 Efficiency	<TD>PUMP3EFF	<TD>P3EF	<TD>S 	<TD>2	<TD>%	<TD>%
+<TR><TD>66	<TD><A HREF = "../index(2).htm#appb19.66">Rig Operating Cost/Hour	<TD>RIGCOST	<TD>RIGC	<TD>S 	<TD>2	<TD>----	<TD>$
+<TR><TD>67	<TD><A HREF = "../index(2).htm#appb19.67">Trip Rate (Dist/Time)	<TD>TRIPRATE	<TD>TRRT	<TD>F 	<TD>4	<TD>KPH	<TD>KF/H
+<TR><TD>68	<TD><A HREF = "../index(2).htm#appb19.68">Kill Line ID	<TD>KILLID	<TD>KLID	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>69	<TD><A HREF = "../index(2).htm#appb19.69">Kill Line Joint ID	<TD>KILLJID	<TD>KLJD	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>70	<TD><A HREF = "../index(2).htm#appb19.70">Kill Line Joint Fraction	<TD>KILLJF	<TD>KLJF	<TD>S 	<TD>2	<TD>%	<TD>%
+<TR><TD>71	<TD><A HREF = "../index(2).htm#appb19.71">Kill Line Length	<TD>KILLLEN	<TD>KLLE	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>72	<TD><A HREF = "../index(2).htm#appb19.72">Choke Line ID	<TD>CHKID<TD>	CHID	<TD>F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>73 	<TD><A HREF = "../index(2).htm#appb19.73">Choke Line Joint ID	<TD>CHKJID	<TD>CHJD<TD>	F 	<TD>4	<TD>MM	<TD>IN
+<TR><TD>74	<TD><A HREF = "../index(2).htm#appb19.74">Choke Line Joint Fraction	<TD>CHKJF<TD>	CHJF	<TD>S 	<TD>2	<TD>%	<TD>%
+<TR><TD>75	<TD><A HREF = "../index(2).htm#appb19.75">Choke Line Length	<TD>CHKLEN	<TD>CHLE	<TD>F 	<TD>4	<TD>M<TD>	F
+<TR><TD>76	<TD><A HREF = "../index(2).htm#appb19.76">Depth Casing Shoe (meas)	<TD>DEPTCSGM	<TD>DCGM<TD>F	<TD>4	<TD>M	<TD>F
+<TR><TD>77	<TD><A HREF = "../index(2).htm#appb19.77">Depth Casing Shoe (vert)	<TD>DEPTCSGV	<TD>DCGV	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>78	<TD><A HREF = "../index(2).htm#appb19.78">Depth PIT (meas)	<TD>DEPTPITM	<TD>DPTM	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>79 	<TD><A HREF = "../index(2).htm#appb19.79">Depth PIT (vert)	<TD>DEPTPITV	<TD>DPTV 	<TD>F 	<TD>4	<TD>M	<TD>F
+<TR><TD>80	<TD><A HREF = "../index(2).htm#appb19.80">Frac Pressure Grad at PIT	<TD>FPGPIT	<TD>FPIT	<TD>F 	<TD>4	<TD>KGM3	<TD>PPG
+<TR><TD>81	<TD><A HREF = "../index(2).htm#appb19.81">Drilling Contractor	<TD>DRLGCONT	<TD>CONT	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>82	<TD><A HREF = "../index(2).htm#appb19.82">Rig Name	<TD>RIGNAME	<TD>RIG	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>83	<TD><A HREF = "../index(2).htm#appb19.83">Rig Type	<TD>RIGTYPE	<TD>RTYP	<TD>A 	<TD>16	<TD>----	<TD>----
+<TR><TD>84	<TD><A HREF = "../index(2).htm#appb19.84">Vendor 1 Name/Service	<TD>VENDOR1	<TD>VEN1	<TD>A 	<TD>32	<TD>----	<TD>----
+<TR><TD>85	<TD><A HREF = "../index(2).htm#appb19.84">Vendor 2 Name/Service	<TD>VENDOR2	<TD>VEN2	<TD>A 	<TD>32	<TD>----	<TD>----
+<TR><TD>86	<TD><A HREF = "../index(2).htm#appb19.84">Vendor 3 Name/Service	<TD>VENDOR3	<TD>VEN3	<TD>A 	<TD>32	<TD>----	<TD>----
+<TR><TD>87	<TD><A HREF = "../index(2).htm#appb19.84">Vendor 4 Name/Service	<TD>VENDOR4	<TD>VEN4	<TD>A 	<TD>32	<TD>----	<TD>----
+<TR><TD>88	<TD><A HREF = "../index(2).htm#appb19.84">Vendor 5 Name/Service	<TD>VENDOR5	<TD>VEN5	<TD>A 	<TD>32	<TD>----	<TD>----
+<TR><TD>89	<TD><A HREF = "../index(2).htm#appb19.84">Vendor 6 Name/Service	<TD>VENDOR6	<TD>VEN6	<TD>A 	<TD>32	<TD>----	<TD>----
+<TR><TD>90<TD><A HREF = "../index(2).htm#appb19.90">< SPARE 1 ><TD>SPARE1<TD>SPR1<TD>F<TD>4<TD>----<TD>----
+<TR><TD>91<TD><A HREF = "../index(2).htm#appb19.90">< SPARE 2 ><TD>SPARE2<TD>SPR2<TD>F<TD>4<TD>----<TD>----
+<TR><TD>92<TD><A HREF = "../index(2).htm#appb19.90">< SPARE 3 ><TD>SPARE3<TD>SPR3<TD>F<TD>4<TD>----<TD>----
+<TR><TD>93<TD><A HREF = "../index(2).htm#appb19.90">< SPARE 4 ><TD>SPARE4<TD>SPR4<TD>F<TD>4<TD>----<TD>----
+<TR><TD>94<TD><A HREF = "../index(2).htm#appb19.90">< SPARE 5 ><TD>SPARE5<TD>SPR5<TD>F<TD>4<TD>---<TD>----
+</TABLE>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>
